@@ -38,4 +38,16 @@ A memory leak occurs when memory is allocated dynamically but is not freed when 
 - Continuously allocating new memory without freeing old memory that is no longer needed. Over time this can cause the program to run out of available memory. \newline
 - Freeing the same memory block twice. This can corrupt the heap memory management structures, making future allocations fail. \newline
 
+\subsubsection{Memory profilers}
+Valgrind is an extremely useful tool for detecting memory leaks and debugging other memory-related issues in programs written in languages like C and C++. Here are some key points about Valgrind: \newline
+Purpose: Valgrind is designed to help find memory management and threading bugs, including memory leaks, in programs. It can detect issues that are difficult to uncover with traditional debugging.\newline
+How it works: Valgrind instruments and monitors a program's execution to track how it uses memory. It inserts its own memory management code and checks for invalid operations like leaks. \newline
+Detecting leaks: When a program is run through Valgrind, it will track memory allocations and identify leaks by detecting any memory blocks that are allocated but never freed before program termination. \newline
+Other issues found: In addition to leaks, Valgrind can find uses of uninitialized memory, accesses of invalid memory, duplicate frees, memory overlap errors, and thread synchronization problems. \newline
+Minimal overhead: A major advantage of Valgrind is that it imposes fairly low overhead on execution time compared to other memory debugging approaches. \newline
+Usage: To use Valgrind, you run your program by executing the Valgrind tool with your program as the argument. It will analyze and report any issues as the program runs. \newline
+
+
+
+
 \end{document}
