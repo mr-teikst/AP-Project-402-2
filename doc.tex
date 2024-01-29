@@ -91,5 +91,18 @@ This takes the listing of PDFs and pipes it into fzf, which will display an inte
  use arrow keys to preview and select the desired PDF file.
 The selected PDF path will be output by fzf.
 
+\subsubsection{ Opening the file using Zathura}
+zathura \textdollar (fd .pdf \textbar \space fzf) \newline
+The key points: \newline
+fd .pdf \textbar \space fzf outputs the selected PDF path \newline
+\textdollar (...) captures the output of the commands inside as input \newline
+zathura takes the path of a PDF file to open it \newline
+So the full workflow is: \newline
+fd finds all PDFs \newline
+fzf interactively selects one PDF \newline
+The selected path is captured by \textdollar (...) \newline
+zathura opens the PDF file at that path \newline
+
+
 
 \end{document}
