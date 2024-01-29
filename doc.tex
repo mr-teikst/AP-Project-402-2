@@ -30,4 +30,12 @@ by the action that we add in last section when we push in github with a new tag,
 2. Vimscript - Vim has its own scripting language called Vimscript that allows you to customize and extend the editor. You can write Vimscripts to create custom commands, mappings, autocommands, and more. Vimscript files have a .vim extension and are loaded automatically on startup. \newline \newline
 3. Splits and Tabs - Vim allows you to view and edit multiple files or views of the same file in a single session. You can split the window horizontally or vertically to show different split panes using :split or :vsplit. Within each split you can open a file. Vim also supports tabs, allowing you to open files or splits in separate tab pages accessed through :tabnew or :tabedit. You can navigate between splits and tabs to easily work across multiple files/views.
 
+\subsection{Memory profiling}
+\subsubsection{Memory Leak}
+A memory leak occurs when memory is allocated dynamically but is not freed when it is no longer needed. This often happens when pointers to allocated memory are lost or overwritten before the memory is freed. Common causes in C include: \newline
+- Forgetting to free memory that was previously allocated with malloc()/calloc()  /realloc(). Any memory not explicitly freed will remain allocated until the program exits. \newline
+- Failing to free memory before overwriting a pointer that points to it. If the only pointer to a block of memory gets overwritten, that memory can no longer be accessed to free it. \newline
+- Continuously allocating new memory without freeing old memory that is no longer needed. Over time this can cause the program to run out of available memory. \newline
+- Freeing the same memory block twice. This can corrupt the heap memory management structures, making future allocations fail. \newline
+
 \end{document}
