@@ -67,6 +67,7 @@ Usage: To use Valgrind, you run your program by executing the Valgrind tool with
 
 
 \subsection{GNU/Linux Bash Scripting}
+\subsubsection{ fzf}
 Fuzzy searching is a search technique that finds matching items even if the search query doesn't exactly match the item. It looks for close or
  approximate matches based on similarity in characters, patterns, and semantics. This allows searches to be more flexible and tolerant of
  typos.\newline
@@ -80,6 +81,15 @@ So ls \textbar \space fzf will display an interactive list of files and folders,
  matches, select the desired item with arrow keys/Enter, and it will output the selected path. \newline
 This makes it easy to visually select files/folders from the terminal in an efficient fuzzy manner, even in directories with many items. \newline
 
+\subsubsection{Using fzf to find your favorite PDF}
+List all PDF files: \newline
+\textdollar fd .pdf \newline
+This will use fd (a faster alternative to find) to recursively search the current directory for all files ending in .pdf and list them. \newline
+Pipe the output to fzf to select a PDF: \newline
+\textdollar fd .pdf \textbar \space fzf \newline
+This takes the listing of PDFs and pipes it into fzf, which will display an interactive fuzzy finder prompt. You can type characters to filter the list,
+ use arrow keys to preview and select the desired PDF file.
+The selected PDF path will be output by fzf.
 
 
 \end{document}
