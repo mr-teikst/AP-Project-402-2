@@ -1,0 +1,4 @@
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project_MarkupCompile.cache
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project_MarkupCompile.lref
