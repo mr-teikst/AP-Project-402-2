@@ -1,4 +1,6 @@
-﻿using System.Net.Mail;
+﻿using System.Net;
+using System.Net.Mail;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace ApProject.Models
@@ -95,6 +97,41 @@ namespace ApProject.Models
             }
             return false;
         }
+        public static string GenerateAndSendVerificationCode(string email)
+        {
+            try
+            {
+                Random random = new Random();
+                const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+                string verificationCode = new string(Enumerable.Repeat(chars, 6)
+                  .Select(s => s[random.Next(s.Length)]).ToArray());
+
+                string sender = "ap2817830@gmail.com";
+                string pass = "lctjvchiqeichbyc";
+
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
+                {
+                    Port = 587,
+                    Credentials = new NetworkCredential(sender, pass),
+                    EnableSsl = true
+                };
+
+                MailMessage mailMessage = new MailMessage();
+                mailMessage.From = new MailAddress(sender, "System");
+                mailMessage.To.Add(email);
+                mailMessage.Subject = "**Verification Code**";
+                mailMessage.Body = "\n\nYour verification code is  : " + verificationCode;
+
+
+                smtpClient.Send(mailMessage);
+                return verificationCode;
+            }
+
+            catch (Exception ex)
+            {
+                return "-1";
+            }
+        }
 
         public static bool ValidatePassword(string password)
         {
@@ -114,7 +151,7 @@ namespace ApProject.Models
             this.Type = serviceType;
         }
 
-        public void AddOrder(List<Food> foods,Restaurant restaurant ,PaymentType paymentType)
+        public bool AddOrder(List<Food> foods,Restaurant restaurant ,PaymentType paymentType)
         {
             foreach(var food in foods)
             {
@@ -124,6 +161,48 @@ namespace ApProject.Models
              Order order = new Order(foods,this,restaurant,paymentType);
              this.Orders.Add(order);
              restaurant.Orders.Add(order);
+            return SendOrderConfirmationEmail(this.Mail.ToString(), foods);
+        }
+        public static bool SendOrderConfirmationEmail(string email, List<Food> foods)
+        {
+            try
+            {
+                string sender = "ap2817830@gmail.com";
+                string pass = "lctjvchiqeichbyc";
+
+                SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
+                {
+                    Port = 587,
+                    Credentials = new NetworkCredential(sender, pass),
+                    EnableSsl = true
+                };
+
+                MailMessage mailMessage = new MailMessage();
+                mailMessage.From = new MailAddress(sender, foods[0].Restaurant.Name);
+                mailMessage.To.Add(email);
+                mailMessage.Subject = "**Order Payment**";
+
+                StringBuilder body = new StringBuilder();
+                body.AppendLine("\n\nOrders\n");
+                foreach (Food food in foods)
+                {
+                    body.AppendLine("Name : " + food.Name + "   Price : " + food.Price);
+                }
+                body.AppendLine();
+                body.Append("Total price : " + foods.Sum(f => f.Price));
+                body.AppendLine("\n\n");
+                body.AppendLine("Your order has been successfully paid and registered.\nThanks for your purchase.");
+                mailMessage.Body = body.ToString();
+
+                smtpClient.Send(mailMessage);
+                return true;
+
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
         }
         public bool CanReserve(Restaurant restaurant)
         {
