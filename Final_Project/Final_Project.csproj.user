@@ -19,6 +19,12 @@
     <Compile Update="Views\Pages\UserPanelPages\UserPanelProfile.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Pages\UserPanelPages\UserPanelSearch.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserControls\ResturantSearchItemUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -34,6 +40,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Pages\UserPanelPages\UserPanelProfile.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\UserPanelPages\UserPanelSearch.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserControls\ResturantSearchItemUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserControls\TextInput.xaml">
