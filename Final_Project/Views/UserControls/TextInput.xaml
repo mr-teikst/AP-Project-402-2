@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Final_Project.View.UserControls.TextInput"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Final_Project.View.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="140">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="22"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="titleTB" Grid.Row="0" Margin="5 0 0 1" VerticalAlignment="Top" HorizontalAlignment="Left" Panel.ZIndex="1"
+                   FontSize="12" FontWeight="Light" Text="{Binding NameField}" 
+                   Foreground="DarkGray" />
+        <TextBox x:Name="textTXB" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" 
+                 FontSize="12" FontWeight="Light"
+                 Background="Transparent" BorderBrush="DarkGray"
+                 Text="{Binding TextField}" 
+                 IsEnabled="{Binding EnabilityField}" />
+        <Button x:Name="clearBTN" Grid.Row="1" Margin="2 2 3 2" HorizontalAlignment="Right" VerticalAlignment="Center"
+                Content="X" Panel.ZIndex="2" FontSize="12" 
+                Background="Transparent" Foreground="LightGray" BorderThickness="0" 
+                Click="btn_clear_Click"/>
+        <TextBlock x:Name="hintTB" Grid.Row="2" Margin="5 2 5 2" VerticalAlignment="Center" HorizontalAlignment="Left" 
+                   FontSize="10" FontWeight="Light" Text="{Binding HintField}" 
+                   Foreground="Red" />
+
+    </Grid>
+</UserControl>

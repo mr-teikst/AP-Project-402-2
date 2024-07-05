@@ -1,4 +1,6 @@
 ﻿using Final_Project.ViewModels;
+using Final_Project.Views;
+using Final_Project.Views.Pages;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -22,6 +24,7 @@ namespace Final_Project
             InitializeComponent();
             MainWindowViewModel vm = new MainWindowViewModel();
             DataContext = vm;
+            mainFrame.Content = new SignUp();
         }
     }
 }
