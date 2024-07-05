@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\App.xaml
-41254555337
+6-113975672
 
-12682503487
+16-526926174
 1981451641563
-MainWindow.xaml;Views\Pages\Login.xaml;Views\Pages\SignUp.xaml;Views\UserControls\TextInput.xaml;
+MainWindow.xaml;Views\Pages\Login.xaml;Views\Pages\SignUp.xaml;Views\Pages\UserPanelPages\UserPanel.xaml;Views\Pages\UserPanelPages\UserPanelProfile.xaml;Views\UserControls\TextInput.xaml;
 
 False
 

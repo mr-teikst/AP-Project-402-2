@@ -13,10 +13,10 @@
     <Compile Update="Views\Pages\SignUp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Pages\UserPanel\UserPanel.xaml.cs">
+    <Compile Update="Views\Pages\UserPanelPages\UserPanel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\Pages\UserPanel\UserPanelProfile.xaml.cs">
+    <Compile Update="Views\Pages\UserPanelPages\UserPanelProfile.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -30,10 +30,10 @@
     <Page Update="Views\Pages\SignUp.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Pages\UserPanel\UserPanel.xaml">
+    <Page Update="Views\Pages\UserPanelPages\UserPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Pages\UserPanel\UserPanelProfile.xaml">
+    <Page Update="Views\Pages\UserPanelPages\UserPanelProfile.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserControls\TextInput.xaml">
