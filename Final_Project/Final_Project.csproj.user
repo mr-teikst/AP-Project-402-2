@@ -22,7 +22,13 @@
     <Compile Update="Views\Pages\UserPanelPages\UserPanelSearch.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\UserControls\FoodItemUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\UserControls\ResturantSearchItemUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Windows\ResturantWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -45,10 +51,16 @@
     <Page Update="Views\Pages\UserPanelPages\UserPanelSearch.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\UserControls\FoodItemUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\UserControls\ResturantSearchItemUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserControls\TextInput.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Windows\ResturantWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

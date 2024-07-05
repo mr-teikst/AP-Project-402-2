@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Final_Project.Views.Windows;
 
 namespace Final_Project
 {
@@ -26,6 +27,8 @@ namespace Final_Project
             MainWindowViewModel vm = new MainWindowViewModel();
             DataContext = vm;
             mainFrame.Content = new UserPanel();
+            ResturantWindow rv = new ResturantWindow();
+            rv.Show();
         }
     }
 }
