@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\App.xaml
-14-1319439715
+161394287052
 
-34734466352
+38-163394987
 1981451641563
-MainWindow.xaml;Views\Pages\Login.xaml;Views\Pages\SignUp.xaml;Views\Pages\UserPanelPages\UserPanel.xaml;Views\Pages\UserPanelPages\UserPanelHistory.xaml;Views\Pages\UserPanelPages\UserPanelProfile.xaml;Views\Pages\UserPanelPages\UserPanelSearch.xaml;Views\UserControls\FoodItemUserControl.xaml;Views\UserControls\OrderHistoryItemUserControl.xaml;Views\UserControls\OrderItemControlView.xaml;Views\UserControls\ResturantSearchItemUserControl.xaml;Views\UserControls\TextInput.xaml;Views\Windows\OrderBox.xaml;Views\Windows\ResturantWindow.xaml;
+MainWindow.xaml;Views\Pages\Login.xaml;Views\Pages\SignUp.xaml;Views\Pages\UserPanelPages\UserPanel.xaml;Views\Pages\UserPanelPages\UserPanelComplain.xaml;Views\Pages\UserPanelPages\UserPanelHistory.xaml;Views\Pages\UserPanelPages\UserPanelProfile.xaml;Views\Pages\UserPanelPages\UserPanelSearch.xaml;Views\UserControls\ComplainItemUserControl.xaml;Views\UserControls\FoodItemUserControl.xaml;Views\UserControls\OrderHistoryItemUserControl.xaml;Views\UserControls\OrderItemControlView.xaml;Views\UserControls\ResturantSearchItemUserControl.xaml;Views\UserControls\TextInput.xaml;Views\Windows\OrderBox.xaml;Views\Windows\ResturantWindow.xaml;
 
 False
 

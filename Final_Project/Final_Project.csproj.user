@@ -16,6 +16,9 @@
     <Compile Update="Views\Pages\UserPanelPages\UserPanel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Pages\UserPanelPages\UserPanelComplain.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Pages\UserPanelPages\UserPanelHistory.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -23,6 +26,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Pages\UserPanelPages\UserPanelSearch.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserControls\ComplainItemUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\UserControls\FoodItemUserControl.xaml.cs">
@@ -57,6 +63,9 @@
     <Page Update="Views\Pages\UserPanelPages\UserPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\Pages\UserPanelPages\UserPanelComplain.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Pages\UserPanelPages\UserPanelHistory.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -64,6 +73,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Pages\UserPanelPages\UserPanelSearch.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserControls\ComplainItemUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserControls\FoodItemUserControl.xaml">
