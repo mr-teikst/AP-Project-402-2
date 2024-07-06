@@ -35,7 +35,11 @@ namespace Final_Project.ViewModels.UserControlsViewModel
         private string? _TextField;
         public string? TextField
         {
-            get { return _TextField; }
+            get 
+            {
+                if (_TextField == null) return "";
+                else return _TextField;
+            }
             set
             {
                 _TextField = value;

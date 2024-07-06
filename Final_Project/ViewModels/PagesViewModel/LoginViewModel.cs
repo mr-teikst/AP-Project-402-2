@@ -7,42 +7,48 @@ using System.Text;
 using System.Threading.Tasks;
 using ApProject.Models;
 using Final_Project.Views.Pages.UserPanelPages;
+using Final_Project.Views.Pages;
 
 namespace Final_Project.ViewModels.PagesViewModel
 {
     internal class LoginViewModel : ViewModelBase
     {
-        public TextInputViewModel UserNameCVVM { get; set; }
-        public TextInputViewModel PasswordCVVM { get; set; }
+        public TextInputViewModel UserNameUCVM { get; set; }
+        public TextInputViewModel PasswordUCVM { get; set; }
         private MainWindowViewModel mw;
 
         public LoginViewModel(MainWindowViewModel mw)
         {
             this.mw = mw;
-            UserNameCVVM = new TextInputViewModel() { NameField = "User Name" };
-            PasswordCVVM = new TextInputViewModel() { NameField = "Password" };
+            UserNameUCVM = new TextInputViewModel() { NameField = "User Name" };
+            PasswordUCVM = new TextInputViewModel() { NameField = "Password" };
             Customer u = new Customer("erfan", "123", "erfan", "teikst", "09336632932", new System.Net.Mail.MailAddress("erfan.teikst2027@gmail.com"), "", Gender.Male);
         }
 
 
-        public RelayCommand LoginCommand => new RelayCommand(execute => LoginFunc(UserNameCVVM.TextField, PasswordCVVM.TextField));
-
+        public RelayCommand LoginCommand => new RelayCommand(execute => LoginFunc(UserNameUCVM.TextField, PasswordUCVM.TextField));
+        public RelayCommand SignUpCommand => new RelayCommand(execute => SignUpFunc());
 
         private void LoginFunc(string username, string password)
         {
             User result = User.Login(username, password);
             if (result == null)
             {
-                UserNameCVVM.HintField = "Wrong username or password";
+                UserNameUCVM.HintField = "Wrong username or password";
             }
             else
             {
-                UserNameCVVM.HintField = "loged in successfully";
+                PasswordUCVM.HintField = "loged in successfully";
                 if(result is Customer)
                 {
-                    mw.MainFrameField = new  UserPanel();
+                    mw.MainFrameField = new UserPanel();
                 }
             }
+        }
+
+        private void SignUpFunc()
+        {
+            mw.MainFrameField = new SignUp(mw);
         }
 
 

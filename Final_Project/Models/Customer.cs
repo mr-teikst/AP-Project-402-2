@@ -83,7 +83,7 @@ namespace ApProject.Models
         }
         public static bool ValidateEmail(string email)
         {
-            if (Regex.IsMatch(email, @"^[a-zA-Z]{3,32}@[a-zA-Z]{3,32}\.[a-zA-Z]{2,3}$"))
+            if (Regex.IsMatch(email, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"))
             {
                 try
                 {

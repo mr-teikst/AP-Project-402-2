@@ -14,7 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Final_Project;
 using Final_Project.ViewModels.PagesViewModel;
-
+using Final_Project.ViewModels;
 namespace Final_Project.Views.Pages
 {
     /// <summary>
@@ -22,10 +22,10 @@ namespace Final_Project.Views.Pages
     /// </summary>
     public partial class SignUp : Page
     {
-        public SignUp()
+        public SignUp(MainWindowViewModel mw)
         {
             InitializeComponent();
-            SignUpViewModel vm = new SignUpViewModel();
+            SignUpViewModel vm = new SignUpViewModel(mw);
             DataContext = vm;
         }
     }

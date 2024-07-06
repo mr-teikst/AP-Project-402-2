@@ -27,46 +27,52 @@
                 </StackPanel>
                 <StackPanel Grid.Row="1" Orientation="Horizontal">
                     <UserControls:TextInput Margin="0 0 10 0" Width="110"
-                                            />
+                                            DataContext="{Binding NameFieldUCVM}"/>
                     <UserControls:TextInput Margin="10 0 0 0" Width="110"
-                                            />
+                                            DataContext="{Binding LastNameFieldUCVM}"/>
                 </StackPanel>
                 <StackPanel Grid.Row="2" Orientation="Horizontal">
                     <UserControls:TextInput Margin="0 0 10 0" Width="110"
-                                           />
+                                           DataContext="{Binding UserNameFieldUCVM}"/>
                     <UserControls:TextInput Margin="10 0 0 0" Width="110"
-                                           />
+                                           DataContext="{Binding MobileFieldUCVM}"/>
                 </StackPanel>
                 <StackPanel Grid.Row="3" Orientation="Horizontal">
                     <UserControls:TextInput Margin="0 0 10 0" Width="110"
-                                            />
+                                            DataContext="{Binding EmailFieldUCVM}"/>
                     <Button Margin="35 0 0 0" Width="60" Height="22"
                             FontFamily="roboto" FontSize="10" FontWeight="Light"
                             Content="Send Code"
-                            IsEnabled="False"/>
+                            IsEnabled="{Binding CodeBTN_EN}"
+                            Command="{Binding CodeBTNCommand}"/>
                 </StackPanel>
-                <StackPanel Grid.Row="4">
-                    <UserControls:TextInput
-                        
-                       />
+                <StackPanel Grid.Row="4" Orientation="Horizontal">
+                    <UserControls:TextInput Margin="0 0 10 0" Width="110"
+                                            DataContext="{Binding CodeFieldUCVM}"/>
+                    <Button Margin="35 0 0 0" Width="60" Height="22"
+                            FontFamily="roboto" FontSize="10" FontWeight="Light"
+                            Content="Check Code"
+                            IsEnabled="{Binding CodeCheckBTN_EN}"
+                            Command="{Binding CodeCheckBTNCommand}"/>
                 </StackPanel>
                 <StackPanel Grid.Row="5" Orientation="Horizontal">
                     <UserControls:TextInput Margin="0 0 10 0" Width="110"
-                                           
-                                            />
+                                            DataContext="{Binding PasswordFieldUCVM}"/>
                     <UserControls:TextInput Margin="10 0 0 0" Width="110"
-                                            
-                                             />
+                                            DataContext="{Binding ConfirmPasswordFieldUCVM}"/>
                 </StackPanel>
                 <StackPanel Grid.Row="6" HorizontalAlignment="Center" Orientation="Horizontal">
                     <Button Margin="0 0 40 0" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="50"
                             FontFamily="roboto" FontSize="10" FontWeight="Light"
                             Content="Login"
-                            IsEnabled="False"/>
+                            IsEnabled="True"
+                            Command="{Binding LoginBTNCommand}"/>
                     
                     <Button Margin="40 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="50"
                             FontFamily="roboto" FontSize="10" FontWeight="Light"
-                            Content="SignUp"/>
+                            Content="SignUp"
+                            IsEnabled="{Binding SignUpBTN_EN}"
+                            Command="{Binding SignUpBTNCommand}"/>
                 </StackPanel>
             </Grid>
         </StackPanel>
