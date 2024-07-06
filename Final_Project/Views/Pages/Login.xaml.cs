@@ -22,10 +22,10 @@ namespace Final_Project.Views.Pages
     /// </summary>
     public partial class Login : Page
     {
-        public Login()
+        public Login(MainWindowViewModel mw)
         {
             InitializeComponent();
-            LoginViewModel vm = new LoginViewModel();
+            LoginViewModel vm = new LoginViewModel(mw);
             DataContext = vm;
         }
 

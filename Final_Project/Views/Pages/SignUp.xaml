@@ -27,19 +27,19 @@
                 </StackPanel>
                 <StackPanel Grid.Row="1" Orientation="Horizontal">
                     <UserControls:TextInput Margin="0 0 10 0" Width="110"
-                                            NameField="Name" />
+                                            />
                     <UserControls:TextInput Margin="10 0 0 0" Width="110"
-                                            NameField="Last Name" />
+                                            />
                 </StackPanel>
                 <StackPanel Grid.Row="2" Orientation="Horizontal">
                     <UserControls:TextInput Margin="0 0 10 0" Width="110"
-                                            NameField="User name"/>
+                                           />
                     <UserControls:TextInput Margin="10 0 0 0" Width="110"
-                                            NameField="Mobile number" />
+                                           />
                 </StackPanel>
                 <StackPanel Grid.Row="3" Orientation="Horizontal">
                     <UserControls:TextInput Margin="0 0 10 0" Width="110"
-                                            NameField="Email" />
+                                            />
                     <Button Margin="35 0 0 0" Width="60" Height="22"
                             FontFamily="roboto" FontSize="10" FontWeight="Light"
                             Content="Send Code"
@@ -47,16 +47,16 @@
                 </StackPanel>
                 <StackPanel Grid.Row="4">
                     <UserControls:TextInput
-                        NameField="Code"
-                        EnabilityField="False" />
+                        
+                       />
                 </StackPanel>
                 <StackPanel Grid.Row="5" Orientation="Horizontal">
                     <UserControls:TextInput Margin="0 0 10 0" Width="110"
-                                            NameField="Password"
-                                            EnabilityField="False" />
+                                           
+                                            />
                     <UserControls:TextInput Margin="10 0 0 0" Width="110"
-                                            NameField="Confirm password" 
-                                            EnabilityField="False" />
+                                            
+                                             />
                 </StackPanel>
                 <StackPanel Grid.Row="6" HorizontalAlignment="Center" Orientation="Horizontal">
                     <Button Margin="0 0 40 0" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="50"

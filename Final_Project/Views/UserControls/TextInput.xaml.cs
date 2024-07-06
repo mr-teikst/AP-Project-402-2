@@ -32,48 +32,6 @@ namespace Final_Project.View.UserControls
             DataContext = vm;
         }
 
-        private string _NameField;
-        public string NameField {
-            get { return _NameField; }
-            set 
-            { 
-                _NameField = value;
-                vm.NameField = value;
-            }
-        }
-
-        private string _HintField;
-        public string HintField { 
-            get { return _HintField; } 
-            set 
-            {
-                _HintField = value;
-                vm.HintField = value;
-            }
-        }
-
-        private string _TextField;
-        public string TextField
-        {
-            get { return _TextField; }
-            set 
-            {
-                _TextField = value;
-                vm.TextField = value;
-            }
-        }
-
-        private bool _EnabilityField = true;
-        public bool EnabilityField
-        {
-            get { return _EnabilityField; }
-            set
-            {
-                _EnabilityField = value;
-                vm.EnabilityField = value;
-            }
-        }
-
 
         private void btn_clear_Click(object sender, RoutedEventArgs e)
         {

@@ -22,21 +22,20 @@
             <TextBlock Grid.Row="0" Margin="0 0 0 30" VerticalAlignment="Center" HorizontalAlignment="Center"
                        Text="Login" FontSize="36" />
             <StackPanel Grid.Row="1">
-                <UserControls:TextInput
-                    NameField="user name" 
-                    TextField="1234"/>
+                <UserControls:TextInput DataContext="{Binding UserNameCVVM}"/>
             </StackPanel>
             <StackPanel Grid.Row="2">
-                <UserControls:TextInput
-                    NameField="passwoed" />
+                <UserControls:TextInput DataContext="{Binding PasswordCVVM}"/>
             </StackPanel>
             <StackPanel Grid.Row="3" Margin="0 20 0 0" HorizontalAlignment="Center" Orientation="Horizontal">
                 <Button  Margin="0 0 10 0" VerticalAlignment="Center" HorizontalAlignment="Left"  Width="50"
-                        Content="Login"/>
+                        Content="Login"
+                         Command="{Binding LoginCommand}"/>
                 <Button Margin="10 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Right" Width="50"
-                        Content="SignUp"/>
+                        Content="SignUp"
+                        />
             </StackPanel>
         </StackPanel>
-
+        
     </Grid>
 </Page>

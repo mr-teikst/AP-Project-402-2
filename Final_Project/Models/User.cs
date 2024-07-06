@@ -13,16 +13,16 @@ namespace ApProject.Models
             Users.Add(this);
         }
 
-     public static bool Login (string userName, string password)
+     public static User? Login (string userName, string password)
         {
             foreach (var user in Users)
             {
                 if (user.UserName == userName && user.Password==password)
                 {
-                    return true;
+                    return user;
                 }
             }
-            return false;
+            return null;
         }
      
     }

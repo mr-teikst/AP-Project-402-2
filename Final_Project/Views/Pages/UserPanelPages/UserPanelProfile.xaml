@@ -27,24 +27,24 @@
                         </Grid.RowDefinitions>
                         <StackPanel Grid.Row="0" Orientation="Horizontal">
                             <UserControls:TextInput Margin="20 0 20 0" Width="200" Height="55"
-                                NameField="Username"/>
+                               />
                             <UserControls:TextInput Margin="0 0 20 0" Width="200" Height="55"
-                                NameField="Username"/>
+                               />
                             <UserControls:TextInput Margin="0 0 20 0" Width="200" Height="55"
-                                NameField="Username"/>
+                                />
                         </StackPanel>
                         <StackPanel Grid.Row="1" Orientation="Horizontal">
                             <UserControls:TextInput Margin="20 0 20 0" Width="200" Height="55"
-                                NameField="Username"/>
+                                />
                             <UserControls:TextInput Margin="0 0 20 0" Width="200" Height="55"
-                                NameField="Username"/>
+                               />
 
                         </StackPanel>
                         <StackPanel Grid.Row="2" Orientation="Horizontal">
                             <UserControls:TextInput Margin="20 0 20 0" Width="200" Height="55"
-                                NameField="Username"/>
+                               />
                             <UserControls:TextInput Margin="0 0 20 0" Width="420" Height="55"
-                                NameField="Username"/>
+                                />
 
                         </StackPanel>
 
