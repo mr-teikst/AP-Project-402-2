@@ -25,16 +25,17 @@
             </ScrollViewer>
             <StackPanel Grid.Column="1" Margin="15 20 15 20">
                 <UserControls:TextInput Margin="5"
-                    />
+                                        DataContext="{Binding NameSearchUCVM}"/>
                 <UserControls:TextInput Margin="5"
-                    />
+                                        DataContext="{Binding CitySearchUCVM}"/>
                 <UserControls:TextInput Margin="5"
-                    />
+                                        DataContext="{Binding RateSearchUCVM}"/>
                 <UserControls:TextInput Margin="5"
-                    />
+                                        DataContext="{Binding Dine_inSearchUCVM}"/>
 
                 <Button Margin="5"
-                        Content="Aplly" />
+                        Content="Apply" 
+                        Command="{Binding ApplyBTNCommand}"/>
             </StackPanel>
         </Grid>
     </Grid>

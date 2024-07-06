@@ -70,13 +70,30 @@ namespace ApProject.Models
         {
             return Resturants.Where(r => r.City == city).ToList();
         }
+        public static List<Resturant> SearchByCity(string city, List<Resturant> Resturants)
+        {
+            return Resturants.Where(r => r.City == city).ToList();
+        }
 
         public  static List<Resturant> SearchByRestaurantName( string restaurantName)
         {
             return Resturants.Where(r => r.Name == restaurantName).ToList();
         }
+        public static List<Resturant> SearchByRestaurantName(string restaurantName, List<Resturant> Resturants)
+        {
+            return Resturants.Where(r => r.Name == restaurantName).ToList();
+        }
 
         public static List<Resturant> SearchByMinimumRating( double minimumRating)
+        {
+            foreach (var r in Resturants)
+            {
+                r.CalculateRestaurantAverageRating();
+            }
+
+            return Resturants.Where(r => r.Rating >= minimumRating).ToList();
+        }
+        public static List<Resturant> SearchByMinimumRating(double minimumRating, List<Resturant> Resturants)
         {
             foreach (var r in Resturants)
             {
@@ -91,14 +108,23 @@ namespace ApProject.Models
             return Resturants.Where(r => r.Complaints.Any(c => c.Status == status)).ToList();
         }
 
-        public static List<Resturant> SearchByDine_in()
+        public static List<Resturant> SearchByDine_in(bool status)
         {
             foreach(var r in Resturants)
             {
                 r.CheckReserveState();
             }
 
-            return Resturants.Where(r=>r.CanReserve==true).ToList();
+            return Resturants.Where(r=>r.CanReserve== status).ToList();
+        }
+        public static List<Resturant> SearchByDine_in(bool status, List<Resturant> Resturants)
+        {
+            foreach (var r in Resturants)
+            {
+                r.CheckReserveState();
+            }
+
+            return Resturants.Where(r => r.CanReserve == status).ToList();
         }
         public void AddFood(string name,string material,double price,string image,int count,FoodCategory category)
         {
