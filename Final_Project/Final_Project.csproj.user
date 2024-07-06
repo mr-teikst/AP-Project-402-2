@@ -10,6 +10,12 @@
     <Compile Update="Views\Pages\Login.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Pages\ResturantPanelPages\ResturantPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\ResturantPanelPages\ResturantPanelChangeMenu.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Pages\SignUp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -32,6 +38,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\UserControls\FoodItemUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\UserControls\FoodMenuItemUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\UserControls\OrderHistoryItemUserControl.xaml.cs">
@@ -57,6 +66,12 @@
     <Page Update="Views\Pages\Login.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\Pages\ResturantPanelPages\ResturantPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\ResturantPanelPages\ResturantPanelChangeMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Pages\SignUp.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -79,6 +94,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserControls\FoodItemUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UserControls\FoodMenuItemUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserControls\OrderHistoryItemUserControl.xaml">

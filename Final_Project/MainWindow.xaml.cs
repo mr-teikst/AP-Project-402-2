@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Final_Project.Views.Windows;
+using Final_Project.Views.Pages.ResturantPanelPages;
 
 namespace Final_Project
 {
@@ -26,11 +27,11 @@ namespace Final_Project
             InitializeComponent();
             MainWindowViewModel vm = new MainWindowViewModel();
             DataContext = vm;
-            mainFrame.Content = new UserPanel();
-            OrderBox ob = new OrderBox();
-            ob.Show();
-            ResturantWindow rv = new ResturantWindow();
-            rv.Show();
+            mainFrame.Content = new ResturantPanel();
+            //OrderBox ob = new OrderBox();
+            //ob.Show();
+            //ResturantWindow rv = new ResturantWindow();
+            //rv.Show();
         }
     }
 }
