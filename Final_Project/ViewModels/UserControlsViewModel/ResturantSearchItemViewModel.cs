@@ -17,5 +17,32 @@ namespace Final_Project.ViewModels.UserControlsViewModel
 			set { _ResturantNameField = value; OnPropertyChanged();  }
 		}
 
+		private string _AddressField;
+
+		public string AddressField
+		{
+			get { return _AddressField; }
+			set { _AddressField = value; OnPropertyChanged(); }
+		}
+
+		private string _ReservationStatusField;
+
+		public string ReservationStatusField
+        {
+			get { return _ReservationStatusField; }
+			set { _ReservationStatusField = value; OnPropertyChanged(); }
+		}
+
+
+		private string _RateField;
+
+		public string RateField
+        {
+			get { return _RateField; }
+			set { _RateField = value; OnPropertyChanged(); }
+		}
+
+
+
 	}
 }

@@ -15,20 +15,31 @@ namespace Final_Project.ViewModels.PagesViewModel
     internal class UserPanelSearchViewModel : ViewModelBase
     {
 
-        public ObservableCollection<UserControl> ItemSourceFiels = new ObservableCollection<UserControl>();
+        private ObservableCollection<UserControl> _ItemSourceField = new ObservableCollection<UserControl>();
+        public ObservableCollection<UserControl> ItemSourceField
+        {
+            get { return _ItemSourceField; }
+            set { _ItemSourceField = value; }
+        }
+
         private List<ResturantSearchItemViewModel> _ItemSourceFielsViewModels;
 
 
         public UserPanelSearchViewModel() 
         {
-            Resturant r1 = new Resturant("res1", "pass1", "res1", "tehran", "tehran markaz");
-            Resturant r2 = new Resturant("res1", "pass1", "res1", "tehran", "tehran markaz");
+            ItemSourceField.Clear();
             foreach (Resturant resturant in Resturant.Resturants )
             {
                 ResturantSearchItemUserControl resturantItem = new ResturantSearchItemUserControl();
-                ResturantSearchItemViewModel resturantSearchItemViewModel = new ResturantSearchItemViewModel() { ResturantNameField = resturant.Name};
+                ResturantSearchItemViewModel resturantSearchItemViewModel = new ResturantSearchItemViewModel()
+                { 
+                    ResturantNameField = resturant.Name,
+                    AddressField = resturant.Address,
+                    ReservationStatusField = resturant.CanReserve ? "Reservation: Avalable" : "Reservation: UnAvalable",
+                    RateField = resturant.Rating.ToString()
+                };
                 resturantItem.DataContext = resturantSearchItemViewModel;
-                ItemSourceFiels.Add(resturantItem);
+                ItemSourceField.Add(resturantItem);
             }
         }
     }

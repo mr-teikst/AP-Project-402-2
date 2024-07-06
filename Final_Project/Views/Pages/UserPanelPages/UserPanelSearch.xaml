@@ -20,7 +20,7 @@
             <ScrollViewer Grid.Column="0" HorizontalContentAlignment="Right" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                 <StackPanel>
                     <ListView HorizontalAlignment="Center"
-                              ItemsSource="{Binding ItemSourceFiels}"/>
+                              ItemsSource="{Binding ItemSourceField}"/>
                 </StackPanel>
             </ScrollViewer>
             <StackPanel Grid.Column="1" Margin="15 20 15 20">

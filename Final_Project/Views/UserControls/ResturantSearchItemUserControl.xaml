@@ -28,18 +28,18 @@
                         <TextBlock Margin="0 0 160 0"
                             FontFamily="Roboto" FontSize="20" 
                             Text="{Binding ResturantNameField}"/>
-                        <TextBlock
+                        <TextBlock HorizontalAlignment="Right"
                             FontFamily="Roboto" FontSize="14" 
-                            Text="69/100" HorizontalAlignment="Right"/>
+                            Text="{Binding RateField}" />
                     </StackPanel>
                     <StackPanel>
                         <TextBlock Width="400"
                             FontFamily="Roboto" FontSize="14" FontWeight="Light"
-                            Text="Adress"/>
+                            Text="{Binding AddressField}"/>
 
                             <TextBlock Margin="5"  HorizontalAlignment="Center" Background="LightGray" 
                                 FontFamily="Roboto" FontSize="14" FontWeight="Light"
-                                Text="rezervation status" />
+                                Text="{Binding ReservationStatusField}" />
                     </StackPanel>
                 </StackPanel>
             </Grid>
