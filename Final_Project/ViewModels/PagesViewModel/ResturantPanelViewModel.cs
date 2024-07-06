@@ -11,7 +11,7 @@ namespace Final_Project.ViewModels.PagesViewModel
 {
     internal class ResturantPanelViewModel : ViewModelBase
     {
-		private Page _ResturantPanelFrame = new ResturantPanelChangeMenu();
+		private Page _ResturantPanelFrame = new ResturantPanelReservation();
 
 		public Page ResturantPanelFrame
         {

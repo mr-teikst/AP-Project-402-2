@@ -19,9 +19,6 @@
                     Content="Change Menue"/>
             <Button Width="100"
                     FontFamily="roboto" FontSize="15" FontWeight="Light"
-                    Content="Change Supply"/>
-            <Button Width="100"
-                    FontFamily="roboto" FontSize="15" FontWeight="Light"
                     Content="Reservation"/>
             <Button Width="100"
                     FontFamily="roboto" FontSize="15" FontWeight="Light"

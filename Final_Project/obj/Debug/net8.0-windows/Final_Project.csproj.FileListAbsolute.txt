@@ -56,3 +56,5 @@ C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Fina
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Pages\ResturantPanelPages\ResturantPanel.baml
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Pages\ResturantPanelPages\ResturantPanelChangeMenu.baml
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\UserControls\FoodMenuItemUserControl.baml
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Pages\ResturantPanelPages\ResturantPanelReservation.g.cs
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Pages\ResturantPanelPages\ResturantPanelReservation.baml
