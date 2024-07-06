@@ -1,0 +1,55 @@
+﻿<Page x:Class="Final_Project.Views.Pages.UserPanelPages.UserPanelHistory"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Final_Project.Views.Pages.UserPanelPages"
+      xmlns:UserControls_="clr-namespace:Final_Project.Views.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserPanelHistory">
+
+    <Grid Background="White">
+        <Border Margin="3"
+                BorderBrush="Black" BorderThickness="3">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+                <Border Margin="5"
+                BorderBrush="Black" BorderThickness="2">
+                    <StackPanel Grid.Row="0" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock 
+                        FontSize="25" FontWeight="Bold"
+                        Text="Order History" />
+                    </StackPanel>
+                </Border>
+                <ScrollViewer Grid.Row="1" HorizontalContentAlignment="Right" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <ListView>
+                            <ListViewItem>
+                                <UserControls_:OrderHistoryItemUserControl />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <UserControls_:OrderHistoryItemUserControl />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <UserControls_:OrderHistoryItemUserControl />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <UserControls_:OrderHistoryItemUserControl />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <UserControls_:OrderHistoryItemUserControl />
+                            </ListViewItem>
+                            <ListViewItem>
+                                <UserControls_:OrderHistoryItemUserControl />
+                            </ListViewItem>
+                        </ListView>
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>

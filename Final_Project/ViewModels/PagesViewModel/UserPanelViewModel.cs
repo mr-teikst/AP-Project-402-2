@@ -11,7 +11,7 @@ namespace Final_Project.ViewModels.PagesViewModel
 {
     internal class UserPanelViewModel : ViewModelBase
     {
-		private Page _UserPanelFrame = new UserPanelSearch();
+		private Page _UserPanelFrame = new UserPanelHistory();
 
 		public Page UserPanelFrame
         {
