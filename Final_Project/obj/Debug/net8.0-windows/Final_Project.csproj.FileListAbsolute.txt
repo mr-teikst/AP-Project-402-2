@@ -58,3 +58,6 @@ C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Fina
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\UserControls\FoodMenuItemUserControl.baml
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Pages\ResturantPanelPages\ResturantPanelReservation.g.cs
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Pages\ResturantPanelPages\ResturantPanelReservation.baml
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\bin\Debug\net8.0-windows\CsvHelper.dll
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Project.csproj.AssemblyReference.cache
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Final_Pr.95B01FB4.Up2Date

@@ -23,7 +23,8 @@
                        Text="Login" FontSize="36" />
             <StackPanel Grid.Row="1">
                 <UserControls:TextInput
-                    NameField="user name" />
+                    NameField="user name" 
+                    TextField="1234"/>
             </StackPanel>
             <StackPanel Grid.Row="2">
                 <UserControls:TextInput

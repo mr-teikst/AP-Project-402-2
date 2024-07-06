@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Final_Project.MVVM;
+using Final_Project.ViewModels.UserControlsViewModel;
 
 namespace Final_Project.View.UserControls
 {
@@ -23,9 +24,12 @@ namespace Final_Project.View.UserControls
     /// </summary>
     public partial class TextInput : UserControl
     {
+        TextInputViewModel vm;
         public TextInput()
         {
             InitializeComponent();
+            vm = new TextInputViewModel();
+            DataContext = vm;
         }
 
         private string _NameField;
@@ -34,7 +38,7 @@ namespace Final_Project.View.UserControls
             set 
             { 
                 _NameField = value;
-                titleTB.Text = value;
+                vm.NameField = value;
             }
         }
 
@@ -43,8 +47,8 @@ namespace Final_Project.View.UserControls
             get { return _HintField; } 
             set 
             {
-                _HintField = value; 
-                hintTB.Text = value;
+                _HintField = value;
+                vm.HintField = value;
             }
         }
 
@@ -55,7 +59,7 @@ namespace Final_Project.View.UserControls
             set 
             {
                 _TextField = value;
-                textTXB.Text = value; 
+                vm.TextField = value;
             }
         }
 
@@ -66,7 +70,7 @@ namespace Final_Project.View.UserControls
             set
             {
                 _EnabilityField = value;
-                textTXB.IsEnabled = value;
+                vm.EnabilityField = value;
             }
         }
 
