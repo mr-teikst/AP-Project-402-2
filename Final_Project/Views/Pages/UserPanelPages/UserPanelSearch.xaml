@@ -19,26 +19,8 @@
             </Grid.ColumnDefinitions>
             <ScrollViewer Grid.Column="0" HorizontalContentAlignment="Right" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                 <StackPanel>
-                    <ListView HorizontalAlignment="Center">
-                        <ListViewItem>
-                            <UserControls_:ResturantSearchItemUserControl />
-                        </ListViewItem>
-                        <ListViewItem>
-                            <UserControls_:ResturantSearchItemUserControl />
-                        </ListViewItem>
-                        <ListViewItem>
-                            <UserControls_:ResturantSearchItemUserControl />
-                        </ListViewItem>
-                        <ListViewItem>
-                            <UserControls_:ResturantSearchItemUserControl />
-                        </ListViewItem>
-                        <ListViewItem>
-                            <UserControls_:ResturantSearchItemUserControl />
-                        </ListViewItem>
-                        <ListViewItem>
-                            <UserControls_:ResturantSearchItemUserControl />
-                        </ListViewItem>
-                    </ListView>
+                    <ListView HorizontalAlignment="Center"
+                              ItemsSource="{Binding ItemSourceFiels}"/>
                 </StackPanel>
             </ScrollViewer>
             <StackPanel Grid.Column="1" Margin="15 20 15 20">

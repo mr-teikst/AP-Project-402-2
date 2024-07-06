@@ -19,13 +19,13 @@ namespace ApProject.Models
         public double Rating;
         public double Price;
         public DateTime DateTime;
-        public Restaurant Restaurant;
+        public Resturant Restaurant;
         public Customer Customer;
         public Comment Comment;
         public PaymentType PaymentType;
         public List<Food> Foods=new List<Food>();
 
-        public Order(List<Food> foods,Customer customer,Restaurant restaurant,PaymentType paymentType)
+        public Order(List<Food> foods,Customer customer,Resturant restaurant,PaymentType paymentType)
         {
             this.Foods = foods;
             this.Customer = customer;

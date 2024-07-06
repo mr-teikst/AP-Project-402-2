@@ -151,7 +151,7 @@ namespace ApProject.Models
             this.Type = serviceType;
         }
 
-        public bool AddOrder(List<Food> foods,Restaurant restaurant ,PaymentType paymentType)
+        public bool AddOrder(List<Food> foods,Resturant restaurant ,PaymentType paymentType)
         {
             foreach(var food in foods)
             {
@@ -204,7 +204,7 @@ namespace ApProject.Models
             }
 
         }
-        public bool CanReserve(Restaurant restaurant)
+        public bool CanReserve(Resturant restaurant)
         {
             restaurant.CheckReserveState();
             if (!restaurant.CanReserve) { return false; }
@@ -229,7 +229,7 @@ namespace ApProject.Models
            
             return true;
         }
-        public bool AddReserve(Restaurant restaurant,DateTime dateTime)
+        public bool AddReserve(Resturant restaurant,DateTime dateTime)
         {
             double price = 0;
             int min = (dateTime - DateTime.Now).Minutes;
@@ -257,7 +257,7 @@ namespace ApProject.Models
             if (reserve.Customer.Type == Type.Golden && min >=15) { reserve.Price = 90 ; }
 
         }
-         public void AddComplaint(string title,string description,Restaurant restaurant)
+         public void AddComplaint(string title,string description,Resturant restaurant)
         {
             Complaint complaint = new Complaint(title, description, this, restaurant);
             this.Complaints.Add(complaint);

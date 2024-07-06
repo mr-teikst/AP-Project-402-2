@@ -16,16 +16,20 @@
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <Button Width="100"
                     FontFamily="roboto" FontSize="15" FontWeight="Light"
-                    Content="Profile"/>
+                    Content="Profile"
+                    Command="{Binding ProfileBTNCommand}"/>
             <Button Width="100"
                     FontFamily="roboto" FontSize="15" FontWeight="Light"
-                    Content="Search"/>
+                    Content="Search"
+                    Command="{Binding SearchBTNCommand}"/>
             <Button Width="100"
                     FontFamily="roboto" FontSize="15" FontWeight="Light"
-                    Content="History"/>
+                    Content="History"
+                    Command="{Binding HistoryBTNCommand}"/>
             <Button Width="100"
                     FontFamily="roboto" FontSize="15" FontWeight="Light"
-                    Content="Complain"/>
+                    Content="Complain"
+                    Command="{Binding ComplainBTNCommand}"/>
         </StackPanel>
         <Frame x:Name="UserPanelMainFrame" Grid.Row="1" Content="{Binding UserPanelFrame}"/>
 

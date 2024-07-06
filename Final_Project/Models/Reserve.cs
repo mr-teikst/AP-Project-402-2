@@ -13,10 +13,10 @@ namespace ApProject.Models
         public DateTime DateTime;
         public bool Canceled;
         public bool notPresent;
-        public Restaurant Restaurant;
+        public Resturant Restaurant;
         public Customer Customer;
 
-        public Reserve (Customer customer,Restaurant restaurant,double price,DateTime dateTime)
+        public Reserve (Customer customer,Resturant restaurant,double price,DateTime dateTime)
         {
             this.Customer = customer;
             this.Restaurant = restaurant;

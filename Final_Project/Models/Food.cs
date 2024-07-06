@@ -25,11 +25,11 @@ namespace ApProject.Models
         public int Count;
         public FoodCategory Category;
         public string Image;
-        public Restaurant Restaurant;
+        public Resturant Restaurant;
         public List<Rating> Ratings=new List<Rating>();
         public List<Comment> Comments=new List<Comment>();
 
-        public Food(string name,string material,double price,int count,string image,FoodCategory category,Restaurant restaurant)
+        public Food(string name,string material,double price,int count,string image,FoodCategory category,Resturant restaurant)
         {
             Name = name;
             Material = material;

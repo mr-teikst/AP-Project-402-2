@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace ApProject.Models
 {
-    internal class Restaurant : User
+    internal class Resturant : User
     {
         public string Name;
         public string City;
@@ -16,15 +16,15 @@ namespace ApProject.Models
         public List<Food> Foods=new List<Food>();
         public List<Order> Orders=new List<Order>();
         public List<Reserve> Reserves = new List<Reserve>();
-        public static List<Restaurant > Restaurants = new List<Restaurant>();
+        public static List<Resturant > Resturants = new List<Resturant>();
 
-        public Restaurant(string userName, string password,string name,string city,string address) : base(userName, password)
+        public Resturant(string userName, string password,string name,string city,string address) : base(userName, password)
         {
             Name = name;
             City = city;
             Address = address;
             CanReserve = false;
-            Restaurants.Add(this);
+            Resturants.Add(this);
         }
         
         public static bool ValidateUsername(string username)
@@ -65,39 +65,39 @@ namespace ApProject.Models
             }
             return false;
         }
-        public static List<Restaurant> SearchByCity( string city)
+        public static List<Resturant> SearchByCity( string city)
         {
-            return Restaurants.Where(r => r.City == city).ToList();
+            return Resturants.Where(r => r.City == city).ToList();
         }
 
-        public  static List<Restaurant> SearchByRestaurantName( string restaurantName)
+        public  static List<Resturant> SearchByRestaurantName( string restaurantName)
         {
-            return Restaurants.Where(r => r.Name == restaurantName).ToList();
+            return Resturants.Where(r => r.Name == restaurantName).ToList();
         }
 
-        public static List<Restaurant> SearchByMinimumRating( double minimumRating)
+        public static List<Resturant> SearchByMinimumRating( double minimumRating)
         {
-            foreach (var r in Restaurants)
+            foreach (var r in Resturants)
             {
                 r.CalculateRestaurantAverageRating();
             }
 
-            return Restaurants.Where(r => r.Rating >= minimumRating).ToList();
+            return Resturants.Where(r => r.Rating >= minimumRating).ToList();
         }
 
-        public static List<Restaurant> SearchByStatusComplaints(bool status)
+        public static List<Resturant> SearchByStatusComplaints(bool status)
         {
-            return Restaurants.Where(r => r.Complaints.Any(c => c.Status == status)).ToList();
+            return Resturants.Where(r => r.Complaints.Any(c => c.Status == status)).ToList();
         }
 
-        public static List<Restaurant> SearchByDine_in()
+        public static List<Resturant> SearchByDine_in()
         {
-            foreach(var r in Restaurants)
+            foreach(var r in Resturants)
             {
                 r.CheckReserveState();
             }
 
-            return Restaurants.Where(r=>r.CanReserve==true).ToList();
+            return Resturants.Where(r=>r.CanReserve==true).ToList();
         }
         public void AddFood(string name,string material,double price,string image,int count,FoodCategory category)
         {

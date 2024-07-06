@@ -11,7 +11,7 @@ namespace Final_Project.ViewModels.PagesViewModel
 {
     internal class UserPanelViewModel : ViewModelBase
     {
-		private Page _UserPanelFrame = new UserPanelComplain();
+		private Page _UserPanelFrame = new UserPanelSearch();
 
 		public Page UserPanelFrame
         {
@@ -22,6 +22,12 @@ namespace Final_Project.ViewModels.PagesViewModel
 				OnPropertyChanged();
 			}
 		}
+
+
+        public RelayCommand ProfileBTNCommand => new RelayCommand(execute => UserPanelFrame = new UserPanelProfile());
+        public RelayCommand SearchBTNCommand => new RelayCommand(execute => UserPanelFrame = new UserPanelSearch());
+        public RelayCommand HistoryBTNCommand => new RelayCommand(execute => UserPanelFrame = new UserPanelHistory());
+        public RelayCommand ComplainBTNCommand => new RelayCommand(execute => UserPanelFrame = new UserPanelComplain());
 
 
     }

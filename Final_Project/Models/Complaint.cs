@@ -6,11 +6,11 @@
         public string Description;
         public string Answer;
         public Customer Customer;
-        public Restaurant Restaurant;
+        public Resturant Restaurant;
         public bool Status;
         public static List<Complaint> Complaints = new List<Complaint>();
 
-         public Complaint(string title,string description,Customer customer,Restaurant restaurant)
+         public Complaint(string title,string description,Customer customer,Resturant restaurant)
         {
             Title = title;
             Description = description;

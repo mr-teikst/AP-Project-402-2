@@ -27,7 +27,7 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="0 0 160 0"
                             FontFamily="Roboto" FontSize="20" 
-                            Text="Resturant name"/>
+                            Text="{Binding ResturantNameField}"/>
                         <TextBlock
                             FontFamily="Roboto" FontSize="14" 
                             Text="69/100" HorizontalAlignment="Right"/>
