@@ -7,7 +7,7 @@ using Final_Project.MVVM;
 
 namespace Final_Project.ViewModels.WindowsViewModel
 {
-    class ResturantWindowViewModel : ViewModelBase
+    internal class ResturantWindowViewModel : ViewModelBase
     {
     }
 }

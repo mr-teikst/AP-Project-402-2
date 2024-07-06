@@ -27,6 +27,8 @@ namespace Final_Project
             MainWindowViewModel vm = new MainWindowViewModel();
             DataContext = vm;
             mainFrame.Content = new UserPanel();
+            OrderBox ob = new OrderBox();
+            ob.Show();
             ResturantWindow rv = new ResturantWindow();
             rv.Show();
         }

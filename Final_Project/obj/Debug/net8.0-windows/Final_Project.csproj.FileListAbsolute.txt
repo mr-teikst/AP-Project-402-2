@@ -38,3 +38,7 @@ C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Fina
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\UserControls\FoodItemUserControl.baml
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Windows\ResturantWindow.g.cs
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Windows\ResturantWindow.baml
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\UserControls\OrderItemControlView.g.cs
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Windows\OrderBox.g.cs
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\UserControls\OrderItemControlView.baml
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Windows\OrderBox.baml

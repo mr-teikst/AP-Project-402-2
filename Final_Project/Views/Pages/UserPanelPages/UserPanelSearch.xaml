@@ -19,7 +19,7 @@
             </Grid.ColumnDefinitions>
             <ScrollViewer Grid.Column="0" HorizontalContentAlignment="Right" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
                 <StackPanel>
-                    <ListView >
+                    <ListView HorizontalAlignment="Center">
                         <ListViewItem>
                             <UserControls_:ResturantSearchItemUserControl />
                         </ListViewItem>

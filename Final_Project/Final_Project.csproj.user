@@ -25,7 +25,13 @@
     <Compile Update="Views\UserControls\FoodItemUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\UserControls\OrderItemControlView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\UserControls\ResturantSearchItemUserControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Windows\OrderBox.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\Windows\ResturantWindow.xaml.cs">
@@ -54,10 +60,16 @@
     <Page Update="Views\UserControls\FoodItemUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\UserControls\OrderItemControlView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\UserControls\ResturantSearchItemUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserControls\TextInput.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Windows\OrderBox.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Windows\ResturantWindow.xaml">
