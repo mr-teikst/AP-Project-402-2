@@ -25,14 +25,16 @@
                 <StackPanel Grid.Column="1" Margin="5">
                     <Button Margin="10 10 10 15"
                             FontSize="18" FontWeight="Light"
-                            Content="Add new food"
+                            Content="Add New Food"
                             Command="{Binding AddNewFoodBTNCommand}"/>
                     <Button Margin="10 10 10 15"
-                        FontSize="18" FontWeight="Light"
-                        Content="Delete"/>
+                            FontSize="18" FontWeight="Light"
+                            Content="Delete Food"
+                            Command="{Binding DeleteFoodBTNCommand}"/>
                     <Button Margin="10 10 10 15"
-                        FontSize="18" FontWeight="Light"
-                        Content="Edit"/>
+                            FontSize="18" FontWeight="Light"
+                            Content="Edit Food"
+                            Command="{Binding EditFoodBTNCommand}"/>
 
                 </StackPanel>
             </Grid>
