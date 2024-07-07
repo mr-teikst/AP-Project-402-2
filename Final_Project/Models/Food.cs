@@ -113,6 +113,7 @@ namespace ApProject.Models
             if (check)
             {
                 this.Ratings.Add(new Rating(rate, customer));
+                CalculateFoodAverageRating();
             }
             return check;
         }

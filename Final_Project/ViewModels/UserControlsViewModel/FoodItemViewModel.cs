@@ -61,7 +61,7 @@ namespace Final_Project.ViewModels.UserControlsViewModel
         {
             this.MainFood = MainFood;
             FoodNameField = MainFood.Name;
-            FoodRateField = MainFood.Rating.ToString();
+            FoodRateField = "Rate: " + MainFood.Rating.ToString();
             FoodDescriptionField = MainFood.Material;
             FoodImageField = MainFood.Image;
             FoodCountField = 0;
@@ -74,6 +74,12 @@ namespace Final_Project.ViewModels.UserControlsViewModel
             if (FoodCountField > 0) FoodCountField--;
         });
 
+
+        public RelayCommand ShowCommentsBTNCommand => new RelayCommand(execute =>
+        {
+            ShowCommentsPopUp pw = new ShowCommentsPopUp(MainFood);
+            pw.ShowDialog();
+        });
 
         public RelayCommand CommentBTNCommand => new RelayCommand(execute =>
         {
@@ -138,6 +144,7 @@ namespace Final_Project.ViewModels.UserControlsViewModel
             if (result != null)
             {
                 MainFood.AddRate(UserPanelViewModel.MainCustomer, double.Parse(result));
+                FoodRateField = "Rate: " + MainFood.Rating.ToString();
             }
 
         });

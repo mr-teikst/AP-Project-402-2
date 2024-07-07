@@ -32,6 +32,10 @@
                     </StackPanel>
                     <TextBlock Width="400"
                         Text="{Binding FoodDescriptionField}"/>
+                    <Button Margin="10 10 10 5" Width="90"
+                            FontFamily="Roboto" FontWeight="Light" FontSize="10"
+                            Content="Show Comments"
+                            Command="{Binding ShowCommentsBTNCommand}"/>
                 </StackPanel>
                 <StackPanel Grid.Column="2">
                     <Button Margin="10 10 10 5" Width="60"

@@ -2,11 +2,11 @@
 {
     public class Comment
     {
-        public string Text;
-        public string Answer;
-        public bool Edited;
-        public DateTime DateTime;
-        public Customer Customer;
+        public string Text {  get; set; }
+        public string Answer { get; set; }
+        public bool Edited { get; set; }
+        public DateTime DateTime { get; set; }
+        public Customer Customer { get; set; }
 
         public Comment(string text, DateTime dateTime, Customer customer)
         {

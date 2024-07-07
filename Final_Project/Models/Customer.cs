@@ -21,13 +21,13 @@ namespace ApProject.Models
     public class Customer : User
     {
 
-        public string FirstName;
-        public string LastName;
-        public string PhoneNumebr;
-        public MailAddress Mail;
-        public string PostAddress;
-        public Gender Gender;
-        public Type Type;
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string PhoneNumebr { get; set; }
+        public MailAddress Mail { get; set; }
+        public string PostAddress { get; set; }
+        public Gender Gender { get; set; }
+        public Type Type { get; set; }
         public List<Complaint> Complaints = new List<Complaint>();
         public List<Order> Orders = new List<Order>();
         public List<Reserve> Reserves = new List<Reserve>();
