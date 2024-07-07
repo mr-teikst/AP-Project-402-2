@@ -57,6 +57,7 @@ namespace Final_Project.ViewModels.PagesViewModel
             IsEnableField = _StateField ? true : ResturantPanelViewModel.MainResturant.CanReserve;
             StateField = StateField == "Enable" ? "Unable" : "Enable";
             NameBTNField = StateField == "Enable" ? "Unable Reservation" : "Enable Reservation";
+            ResturantPanelViewModel.MainResturant.ChangeReserveState();
         });
     }
 }
