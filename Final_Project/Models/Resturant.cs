@@ -167,8 +167,8 @@ namespace ApProject.Models
         
         public void CheckReserveState()
         {
-            double OrderRate = this.Orders.Average(o => o.Rating);
-            double ReserveRate=this.Reserves.Average(o => o.Rating);
+            double OrderRate = this.Orders.Count() > 0 ? this.Orders.Average(o => o.Rating) : 0;
+            double ReserveRate= this.Reserves.Count() > 0 ?  this.Reserves.Average(o => o.Rating) : 0;
             double Rate = (OrderRate + ReserveRate) / 2;
             if(Rate >= 4.5)
             {
