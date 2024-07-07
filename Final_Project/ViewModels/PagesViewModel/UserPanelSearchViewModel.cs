@@ -58,7 +58,7 @@ namespace Final_Project.ViewModels.PagesViewModel
                     rate = double.Parse(RateSearchUCVM.TextField);
                     if (rate < 0 || rate > 5) throw new Exception();
                     RateSearchUCVM.HintField = "";
-                    resturants = Resturant.SearchByMinimumRating(rate);
+                    resturants = Resturant.SearchByMinimumRating(rate, resturants);
                 }
                 catch
                 {
@@ -73,7 +73,7 @@ namespace Final_Project.ViewModels.PagesViewModel
                     state = Dine_inSearchUCVM.TextField.ToLower() == "yes"? true: false;
                     if (Dine_inSearchUCVM.TextField.ToLower() != "yes" && Dine_inSearchUCVM.TextField.ToLower() != "no") throw new Exception();
                     Dine_inSearchUCVM.HintField = "";
-                    resturants = Resturant.SearchByDine_in(state);
+                    resturants = Resturant.SearchByDine_in(state, resturants);
                 }
                 catch
                 {
@@ -89,13 +89,14 @@ namespace Final_Project.ViewModels.PagesViewModel
             ItemSourceField.Clear();
             foreach (Resturant resturant in resturants)
             {
+                resturant.CalculateRestaurantAverageRating();
                 ResturantSearchItemUserControl resturantItem = new ResturantSearchItemUserControl();
                 ResturantSearchItemViewModel resturantSearchItemViewModel = new ResturantSearchItemViewModel()
                 {
                     ResturantNameField = resturant.Name,
                     AddressField = resturant.Address,
-                    ReservationStatusField = resturant.CanReserve ? "Reservation: Avalable" : "Reservation: UnAvalable",
-                    RateField = resturant.Rating.ToString(),
+                    ReservationStatusField = resturant.ActiveReserve ? "Reservation: Avalable" : "Reservation: UnAvalable",
+                    RateField = "Rate: " + resturant.Rating.ToString(),
                     ResturantField = resturant
                 };
                 resturantItem.DataContext = resturantSearchItemViewModel;

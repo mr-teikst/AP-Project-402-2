@@ -126,7 +126,7 @@ namespace ApProject.Models
                 r.CheckReserveState();
             }
 
-            return Resturants.Where(r => r.CanReserve == status).ToList();
+            return Resturants.Where(r => r.ActiveReserve == status).ToList();
         }
         public void AddFood(string name,string material,double price,string image,int count,FoodCategory category = FoodCategory.None)
         {
@@ -228,9 +228,9 @@ namespace ApProject.Models
             {
                 f.CalculateFoodAverageRating(); 
             }
-            double foodsrate = Foods.Average(f => f.Rating);
-            double orderrate = Orders.Average(o => o.Rating);
-            double reserverate=Reserves.Average(o => o.Rating);
+            double foodsrate = Foods.Count() > 0 ? Foods.Average(f => f.Rating) : 0;
+            double orderrate = Orders.Count() > 0 ? Orders.Average(o => o.Rating) : 0;
+            double reserverate = Reserves.Count() > 0 ? Reserves.Average(o => o.Rating) : 0;
             this.Rating = (foodsrate + orderrate + reserverate) / 3;
         }
 

@@ -206,10 +206,8 @@ namespace ApProject.Models
             }
 
         }
-        public bool CanReserve(Resturant restaurant)
+        public bool CanReserve()
         {
-            restaurant.CheckReserveState();
-            if (!restaurant.CanReserve) { return false; }
 
             if (this.Type == Type.None) { return false; }
 

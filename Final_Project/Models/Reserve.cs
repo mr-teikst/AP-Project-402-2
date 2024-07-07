@@ -24,6 +24,8 @@ namespace ApProject.Models
             this.Canceled = false;  
             this.DateTime =dateTime;
             this.Price = price;
+            restaurant.Reserves.Add(this);
+            customer.Reserves.Add(this);
 
         }
         public static List<Reserve> FilterByUsername(string username, DateTime start, DateTime end, List<Reserve > reserves)
@@ -45,6 +47,14 @@ namespace ApProject.Models
         public void AddRating(double  rating)
         {
             this.Rating= rating;    
+        }
+        public void Cancel()
+        {
+            this.Canceled = true;
+        }
+        public void NotPresent()
+        {
+            this.notPresent = true;
         }
     }
 }

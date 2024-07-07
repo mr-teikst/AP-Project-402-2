@@ -26,7 +26,8 @@
                 <Grid Grid.Column="1" Margin="5">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="8*" />
-                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
                     </Grid.RowDefinitions>
                     <StackPanel Grid.Row="0">
                         <TextBlock
@@ -41,7 +42,13 @@
                                 Content="Order" 
                                 Command="{Binding OrderBTNCommand}"/>
                         <Button Margin="30 0 0 0" Width="90"
-                            Content="Reserve" />
+                            Content="Reserve" 
+                                Command="{Binding ReserveBTNCommand}"/>
+                    </StackPanel>
+                    <StackPanel Grid.Row="2" Margin="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <TextBlock HorizontalAlignment="Center"
+                                   Foreground="Red" FontWeight="Light" FontSize="12"
+                                   Text="{Binding HintField}" />
                     </StackPanel>
                 </Grid>
             </Grid>

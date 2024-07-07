@@ -67,3 +67,5 @@ C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Fina
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Windows\ShowCommentsPopUp.baml
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Windows\AddNewFoodPopUp.g.cs
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Windows\AddNewFoodPopUp.baml
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Windows\ReserveBox.g.cs
+C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\obj\Debug\net8.0-windows\Views\Windows\ReserveBox.baml

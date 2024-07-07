@@ -31,6 +31,15 @@ namespace Final_Project.ViewModels.WindowsViewModel
             set { _ResturantNameField = value; OnPropertyChanged(); }
         }
 
+        private string _HintField;
+
+        public string HintField
+        {
+            get { return _HintField; }
+            set { _HintField = value; OnPropertyChanged(); }
+        }
+
+
 
         private ObservableCollection<UserControl> _ItemSourceField = new ObservableCollection<UserControl>();
         public ObservableCollection<UserControl> ItemSourceField
@@ -51,7 +60,29 @@ namespace Final_Project.ViewModels.WindowsViewModel
 
         public RelayCommand OrderBTNCommand => new RelayCommand(execute => BiuldOrder());
 
-
+        public RelayCommand ReserveBTNCommand => new RelayCommand(execute =>
+        {
+            ReserveBox rb = new ReserveBox(MainResturant);
+            ReserveBoxViewModel rbVM = new ReserveBoxViewModel(MainResturant, rb);
+            bool isAllOk = true;
+            if(!MainResturant.ActiveReserve)
+            {
+                isAllOk = false;
+                HintField = "Reservation is not Active for this Resturant";
+                return;
+            }
+            if(!UserPanelViewModel.MainCustomer.CanReserve())
+            {
+                isAllOk = false;
+                HintField = "you are not able to reserve";
+                return;
+            }
+            if(isAllOk)
+            {
+                HintField = "";
+                rb.ShowDialog();
+            }
+        });
 
         private void BiuldOrder ()
         {

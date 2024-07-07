@@ -80,7 +80,7 @@ namespace ApProject.Models
         }
         public void CalculateFoodAverageRating()
         {
-            Rating = Ratings.Average(f => f.Value);
+            Rating = Ratings.Count() > 0 ? Ratings.Average(f => f.Value) : 0;
         }
         public void AddComment(Customer customer,string text)
         {
