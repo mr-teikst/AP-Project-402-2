@@ -1,6 +1,6 @@
 ﻿namespace ApProject.Models
 {
-    class Rating
+    public class Rating
     {
         public double Value;
         public Customer Customer;

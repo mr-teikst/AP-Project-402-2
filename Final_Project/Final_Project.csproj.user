@@ -49,7 +49,7 @@
     <Compile Update="Views\UserControls\OrderHistoryItemUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Views\UserControls\OrderItemControlView.xaml.cs">
+    <Compile Update="Views\UserControls\OrderItemUserControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\UserControls\ResturantSearchItemUserControl.xaml.cs">
@@ -108,7 +108,7 @@
     <Page Update="Views\UserControls\OrderHistoryItemUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\UserControls\OrderItemControlView.xaml">
+    <Page Update="Views\UserControls\OrderItemUserControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\UserControls\ResturantSearchItemUserControl.xaml">

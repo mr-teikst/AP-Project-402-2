@@ -1,6 +1,6 @@
 ﻿namespace ApProject.Models
 {
-    class Comment
+    public class Comment
     {
         public string Text;
         public string Answer;

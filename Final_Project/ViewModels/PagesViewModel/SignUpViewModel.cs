@@ -167,7 +167,7 @@ namespace Final_Project.ViewModels.PagesViewModel
                                                  new MailAddress(EmailFieldUCVM.TextField),
                                                  "",
                                                  Gender.None);
-                mw.MainFrameField = new UserPanel();
+                mw.MainFrameField = new UserPanel(customer);
             }
 
         }

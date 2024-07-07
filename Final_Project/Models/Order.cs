@@ -14,7 +14,7 @@ namespace ApProject.Models
         Cash,
         Online
     }
-    internal class Order
+    public class Order
     {
         public double Rating;
         public double Price;
@@ -23,7 +23,7 @@ namespace ApProject.Models
         public Customer Customer;
         public Comment Comment;
         public PaymentType PaymentType;
-        public List<Food> Foods=new List<Food>();
+        public List<Food> Foods= new List<Food>();
 
         public Order(List<Food> foods,Customer customer,Resturant restaurant,PaymentType paymentType)
         {

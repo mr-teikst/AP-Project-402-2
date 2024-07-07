@@ -5,20 +5,20 @@ using System.Text.RegularExpressions;
 
 namespace ApProject.Models
 {
-    enum Gender
+    public enum Gender
     {
         Female,
         Male,
         None
     }
-    enum Type
+    public enum Type
     {
         Golden,
         Silver,
         Bronze,
         None
     }
-    internal class Customer : User
+    public class Customer : User
     {
 
         public string FirstName;
@@ -151,7 +151,7 @@ namespace ApProject.Models
             this.Type = serviceType;
         }
 
-        public bool AddOrder(List<Food> foods,Resturant restaurant ,PaymentType paymentType)
+        public Order AddOrder(List<Food> foods,Resturant restaurant ,PaymentType paymentType)
         {
             foreach(var food in foods)
             {
@@ -160,11 +160,13 @@ namespace ApProject.Models
 
              Order order = new Order(foods,this,restaurant,paymentType);
              this.Orders.Add(order);
-             restaurant.Orders.Add(order);
-            return SendOrderConfirmationEmail(this.Mail.ToString(), foods);
+            restaurant.Orders.Add(order);
+            return order;
         }
-        public static bool SendOrderConfirmationEmail(string email, List<Food> foods)
+
+        public static bool SendOrderConfirmationEmail(string email, Order order)
         {
+            List<Food> foods = order.Foods;
             try
             {
                 string sender = "ap2817830@gmail.com";

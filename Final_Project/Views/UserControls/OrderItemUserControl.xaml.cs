@@ -12,20 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ApProject.Models;
 using Final_Project.ViewModels.UserControlsViewModel;
-
 
 namespace Final_Project.Views.UserControls
 {
     /// <summary>
-    /// Interaction logic for OrderItemControlView.xaml
+    /// Interaction logic for OrderItemUserControl.xaml
     /// </summary>
-    public partial class OrderItemControlView : UserControl
+    public partial class OrderItemUserControl : UserControl
     {
-        public OrderItemControlView()
+        public OrderItemUserControl(Food food, int foodCount)
         {
             InitializeComponent();
-            OrderItemViewModel vm = new OrderItemViewModel();
+            OrderItemViewModel vm = new OrderItemViewModel(food, foodCount);
             DataContext = vm;
         }
     }

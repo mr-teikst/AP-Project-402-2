@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Final_Project.ViewModels.WindowsViewModel;
+using ApProject.Models;
+
 namespace Final_Project.Views.Windows
 {
     /// <summary>
@@ -19,10 +21,10 @@ namespace Final_Project.Views.Windows
     /// </summary>
     public partial class ResturantWindow : Window
     {
-        public ResturantWindow()
+        public ResturantWindow(Resturant MainResturant)
         {
             InitializeComponent();
-            ResturantWindowViewModel vm = new ResturantWindowViewModel();
+            ResturantWindowViewModel vm = new ResturantWindowViewModel(MainResturant);
             DataContext = vm;
         }
     }

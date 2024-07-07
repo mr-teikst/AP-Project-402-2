@@ -1,6 +1,6 @@
 ﻿namespace ApProject.Models
 {
-    internal class Complaint
+    public class Complaint
     {
         public string Title;
         public string Description;

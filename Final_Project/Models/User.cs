@@ -1,7 +1,7 @@
 ﻿
 namespace ApProject.Models
 {
-    internal class User
+    public class User
     {
       public string UserName;
       public string Password;

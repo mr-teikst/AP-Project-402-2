@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using ApProject.Models;
 using Final_Project.MVVM;
+using Final_Project.Views.Windows;
 
 namespace Final_Project.ViewModels.UserControlsViewModel
 {
@@ -42,7 +45,24 @@ namespace Final_Project.ViewModels.UserControlsViewModel
 			set { _RateField = value; OnPropertyChanged(); }
 		}
 
+		private Resturant _ResturantField;
+
+		public Resturant ResturantField
+        {
+			get { return _ResturantField; }
+			set { _ResturantField = value;  OnPropertyChanged(); }
+		}
 
 
-	}
+        public RelayCommand OpenBTNCommand => new RelayCommand(execute =>
+		{
+			ResturantWindow rw = new ResturantWindow(ResturantField);
+			rw.ShowDialog();
+		} );
+
+
+
+
+
+    }
 }

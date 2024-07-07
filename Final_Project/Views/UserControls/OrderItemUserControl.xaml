@@ -1,19 +1,18 @@
-﻿<UserControl x:Class="Final_Project.Views.UserControls.OrderItemControlView"
+﻿<UserControl x:Class="Final_Project.Views.UserControls.OrderItemUserControl"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Final_Project.Views.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="110" d:DesignWidth="390">
-    <Grid Background="White">
+             d:DesignHeight="100" d:DesignWidth="500">
+    <Grid Background="White" Height="100" Width="300">
         <Border Margin="3"
                 BorderBrush="Black" BorderThickness="3">
-            <Grid VerticalAlignment="Center" Height="100">
+            <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="5*"/>
-                    <ColumnDefinition Width="2*"/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
                 <Image Grid.Column="0"
@@ -22,23 +21,15 @@
                 <StackPanel Grid.Column="1" Margin="2 4 2 4" VerticalAlignment="Center">
                     <TextBlock 
                         FontSize="18" FontWeight="Bold"
-                        Text="Food name"/>
+                        Text="{Binding FoodNameField}"/>
                     <TextBlock 
                         FontSize="18" FontWeight="Bold"
-                        Text="13$"/>
+                        Text="{Binding FoodPriceField}"/>
                 </StackPanel>
-                <StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="50">
-                    <Button  Width="20"
-                        Content="+"/>
-                    <TextBlock Margin="0 2 0 2" HorizontalAlignment="Center"
-                               FontSize="15"
-                               Text="00"/>
-                    <Button Width="20"
-                        Content="-"/>
-                </StackPanel>
-                <StackPanel Grid.Column="3" VerticalAlignment="Center" HorizontalAlignment="Center" MinWidth="50">
-                    <Button Margin="3 0 3 0"
-                        Content="del" />
+                <StackPanel Grid.Column="2" Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock  HorizontalAlignment="Center" VerticalAlignment="Center"
+                        FontSize="16" FontWeight="Bold"
+                        Text="{Binding FoodCountField}"/>
                 </StackPanel>
             </Grid>
         </Border>

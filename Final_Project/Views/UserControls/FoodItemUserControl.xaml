@@ -19,19 +19,19 @@
                     <!-- put resturant image in this place -->
                     <Image Margin="10" VerticalAlignment="Center" HorizontalAlignment="Center" Width="90" Height="65"
                            Stretch="Uniform"
-                           Source="C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\assets\Food_01.jpg" />
+                           Source="{Binding FoodImageField}" />
                 </StackPanel>
                 <StackPanel Margin="5" Grid.Column="1">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Margin="0 0 160 0"
                             FontFamily="Roboto" FontSize="20" 
-                            Text="Food name"/>
-                        <TextBlock
+                            Text="{Binding FoodNameField}"/>
+                        <TextBlock HorizontalAlignment="Right"
                             FontFamily="Roboto" FontSize="14" 
-                            Text="69/100" HorizontalAlignment="Right"/>
+                            Text="{Binding FoodRateField}" />
                     </StackPanel>
                     <TextBlock Width="400"
-                        Text="description"/>
+                        Text="{Binding FoodDescriptionField}"/>
                 </StackPanel>
                 <StackPanel Grid.Column="2">
                     <Button Margin="10 10 10 5" Width="60"
@@ -43,13 +43,15 @@
                     <StackPanel Orientation="Horizontal">
                         <Button Margin="10 2 10 2" Width="15" VerticalAlignment="Center"
                             FontFamily="Roboto" FontWeight="Light" FontSize="10"
-                            Content="-"/>
+                            Content="-"
+                            Command="{Binding MinesBTNCommand}"/>
                         <TextBlock VerticalAlignment="Center"
                             FontFamily="Roboto" FontWeight="Light" FontSize="10"
-                            Text="00"/>
+                            Text="{Binding FoodCountField}"/>
                         <Button Margin="10 2 10 2" Width="15" VerticalAlignment="Center"
                             FontFamily="Roboto" FontWeight="Light" FontSize="10"
-                            Content="+"/>
+                            Content="+"
+                            Command="{Binding PlusBTNCommand}"/>
                     </StackPanel>
                 </StackPanel>
             </Grid>

@@ -41,7 +41,7 @@ namespace Final_Project.ViewModels.PagesViewModel
                 PasswordUCVM.HintField = "loged in successfully";
                 if(result is Customer)
                 {
-                    mw.MainFrameField = new UserPanel();
+                    mw.MainFrameField = new UserPanel(result as Customer);
                 }
             }
         }

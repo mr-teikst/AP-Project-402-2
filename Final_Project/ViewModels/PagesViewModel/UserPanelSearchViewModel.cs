@@ -95,7 +95,8 @@ namespace Final_Project.ViewModels.PagesViewModel
                     ResturantNameField = resturant.Name,
                     AddressField = resturant.Address,
                     ReservationStatusField = resturant.CanReserve ? "Reservation: Avalable" : "Reservation: UnAvalable",
-                    RateField = resturant.Rating.ToString()
+                    RateField = resturant.Rating.ToString(),
+                    ResturantField = resturant
                 };
                 resturantItem.DataContext = resturantSearchItemViewModel;
                 ItemSourceField.Add(resturantItem);

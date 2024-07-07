@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ApProject.Models;
 using Final_Project.ViewModels.UserControlsViewModel;
 
 namespace Final_Project.Views.UserControls
@@ -21,10 +22,10 @@ namespace Final_Project.Views.UserControls
     /// </summary>
     public partial class FoodItemUserControl : UserControl
     {
-        public FoodItemUserControl()
+        public FoodItemUserControl(Food MainFood)
         {
             InitializeComponent();
-            FoodItemViewModel vm = new FoodItemViewModel();
+            FoodItemViewModel vm = new FoodItemViewModel(MainFood);
             DataContext = vm;
         }
     }

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ApProject.Models;
 using Final_Project.ViewModels.WindowsViewModel;
 
 namespace Final_Project.Views.Windows
@@ -20,10 +21,10 @@ namespace Final_Project.Views.Windows
     /// </summary>
     public partial class OrderBox : Window
     {
-        public OrderBox()
+        public OrderBox(List<Food> foods)
         {
             InitializeComponent();
-            OrderBoxViewModel vm = new OrderBoxViewModel();
+            OrderBoxViewModel vm = new OrderBoxViewModel(foods, this);
             DataContext = vm;
         }
     }

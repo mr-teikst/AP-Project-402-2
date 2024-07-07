@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ApProject.Models;
 using Final_Project.ViewModels.UserControlsViewModel;
 
 namespace Final_Project.Views.UserControls

@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace ApProject.Models
 {
-    internal class Resturant : User
+    public class Resturant : User
     {
         public string Name;
         public string City;

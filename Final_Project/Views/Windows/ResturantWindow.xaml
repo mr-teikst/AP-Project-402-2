@@ -11,7 +11,6 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40*"/>
-            <RowDefinition Height="10*"/>
             <RowDefinition Height="55*"/>
         </Grid.RowDefinitions>
         <Border Grid.Row="0" Margin="5"
@@ -32,38 +31,25 @@
                     <StackPanel Grid.Row="0">
                         <TextBlock
                             FontSize="20"
-                            Text="Title" />
+                            Text="{Binding ResturantNameField}" />
                         <TextBlock
                             FontSize="12" FontWeight="Light"
                             Text="description" />
                     </StackPanel>
                     <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
                         <Button Margin="0 0 30 0" Width="90"
-                            Content="Order" />
+                                Content="Order" 
+                                Command="{Binding OrderBTNCommand}"/>
                         <Button Margin="30 0 0 0" Width="90"
-                            Content="Order" />
+                            Content="Reserve" />
                     </StackPanel>
                 </Grid>
             </Grid>
         </Border>
         <Border Grid.Row="1" Margin="5"
                 BorderBrush="DarkGray" BorderThickness="3">
-
-        </Border>
-        <Border Grid.Row="2" Margin="5"
-                BorderBrush="DarkGray" BorderThickness="3">
             <ScrollViewer Grid.Column="0" HorizontalContentAlignment="Right" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                <ListView HorizontalAlignment="Center">
-                    <ListViewItem>
-                        <UserControls_:FoodItemUserControl />
-                    </ListViewItem>
-                    <ListViewItem>
-                        <UserControls_:FoodItemUserControl />
-                    </ListViewItem>
-                    <ListViewItem>
-                        <UserControls_:FoodItemUserControl />
-                    </ListViewItem>
-                </ListView>
+                <ListView HorizontalAlignment="Center" ItemsSource="{Binding ItemSourceField}" />
             </ScrollViewer>
 
         </Border>

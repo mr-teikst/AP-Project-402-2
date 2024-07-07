@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ApProject.Models;
 using Final_Project.ViewModels.PagesViewModel;
 
 namespace Final_Project.Views.Pages.UserPanelPages
@@ -21,10 +22,10 @@ namespace Final_Project.Views.Pages.UserPanelPages
     /// </summary>
     public partial class UserPanel : Page
     {
-        public UserPanel()
+        public UserPanel(Customer MainCustomer)
         {
             InitializeComponent();
-            UserPanelViewModel vm = new UserPanelViewModel();
+            UserPanelViewModel vm = new UserPanelViewModel(MainCustomer);
             DataContext = vm;
 
         }

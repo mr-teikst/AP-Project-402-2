@@ -6,11 +6,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using Final_Project.Views.Pages.UserPanelPages;
+using ApProject.Models;
 
 namespace Final_Project.ViewModels.PagesViewModel
 {
     internal class UserPanelViewModel : ViewModelBase
     {
+		public static Customer MainCustomer;
+
 		private Page _UserPanelFrame = new UserPanelSearch();
 
 		public Page UserPanelFrame
@@ -23,6 +26,11 @@ namespace Final_Project.ViewModels.PagesViewModel
 			}
 		}
 
+		public UserPanelViewModel (Customer mainCustomer)
+		{
+			MainCustomer = mainCustomer;
+
+        }
 
         public RelayCommand ProfileBTNCommand => new RelayCommand(execute => UserPanelFrame = new UserPanelProfile());
         public RelayCommand SearchBTNCommand => new RelayCommand(execute => UserPanelFrame = new UserPanelSearch());

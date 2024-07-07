@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ApProject.Models
 {
-    internal class Reserve
+    public class Reserve
     {
         public double Price;
         public double Rating;

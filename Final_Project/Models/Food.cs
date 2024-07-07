@@ -16,7 +16,7 @@ namespace ApProject.Models
         Breakfast,
         None
     }
-    class Food
+    public class Food
     {
         public string Name;
         public string Material;
@@ -28,6 +28,13 @@ namespace ApProject.Models
         public Resturant Restaurant;
         public List<Rating> Ratings=new List<Rating>();
         public List<Comment> Comments=new List<Comment>();
+
+        public static Food f1 = new Food("burger", "beif, bread", 13, 10,
+            "C:\\Users\\erfan\\OneDrive\\Desktop\\Code\\C# WPF\\git_Final_Project\\Final_Project\\Final_Project\\assets\\Food_01.jpg",
+            FoodCategory.None, Resturant.r1);
+        public static Food f2 = new Food("HotDog", "beif, bread", 10, 5,
+            "C:\\Users\\erfan\\OneDrive\\Desktop\\Code\\C# WPF\\git_Final_Project\\Final_Project\\Final_Project\\assets\\Food_01.jpg",
+            FoodCategory.None, Resturant.r1);
 
         public Food(string name,string material,double price,int count,string image,FoodCategory category,Resturant restaurant)
         {
