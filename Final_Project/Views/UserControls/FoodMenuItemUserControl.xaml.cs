@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using ApProject.Models;
 using Final_Project.ViewModels.UserControlsViewModel;
 
+
 namespace Final_Project.Views.UserControls
 {
     /// <summary>
@@ -22,10 +23,10 @@ namespace Final_Project.Views.UserControls
     /// </summary>
     public partial class FoodMenuItemUserControl : UserControl
     {
-        public FoodMenuItemUserControl()
+        public FoodMenuItemUserControl(Food mainFood)
         {
             InitializeComponent();
-            FoodMenuItemViewModel vm = new FoodMenuItemViewModel();
+            FoodMenuItemViewModel vm = new FoodMenuItemViewModel(mainFood);
             DataContext = vm;
         }
     }

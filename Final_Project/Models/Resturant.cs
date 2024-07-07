@@ -126,9 +126,9 @@ namespace ApProject.Models
 
             return Resturants.Where(r => r.CanReserve == status).ToList();
         }
-        public void AddFood(string name,string material,double price,string image,int count,FoodCategory category)
+        public void AddFood(string name,string material,double price,string image,int count,FoodCategory category = FoodCategory.None)
         {
-            Food food = new Food(name,material,price,count,image,category,this);
+            Food food = new Food(name,material,price,count,image, this, category);
             this.Foods.Add(food);
         }
         public void RemoveFood(Food food)

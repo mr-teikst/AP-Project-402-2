@@ -16,13 +16,16 @@
         <StackPanel Grid.Row="0" Orientation="Horizontal">
             <Button Width="100"
                     FontFamily="roboto" FontSize="15" FontWeight="Light"
-                    Content="Change Menue"/>
+                    Content="Change Menue"
+                    Command="{Binding ChangeMenuBTNCommand}"/>
             <Button Width="100"
                     FontFamily="roboto" FontSize="15" FontWeight="Light"
-                    Content="Reservation"/>
+                    Content="Reservation"
+                    Command="{Binding ReservationBTNCommand}"/>
             <Button Width="100"
                     FontFamily="roboto" FontSize="15" FontWeight="Light"
-                    Content="History"/>
+                    Content="History"
+                    Command="{Binding HistoryBTNCommand}"/>
         </StackPanel>
         <Frame x:Name="UserPanelMainFrame" Grid.Row="1" Content="{Binding ResturantPanelFrame}"/>
 

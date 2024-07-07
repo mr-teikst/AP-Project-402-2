@@ -16,11 +16,11 @@
                 </Grid.ColumnDefinitions>
                 <Image Grid.Column="0"
                        Stretch="Uniform"
-                       Source="C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\assets\Food_01.jpg" />
+                       Source="{Binding FoodImageField}" />
                 <StackPanel Grid.Column="1"  Margin="5" VerticalAlignment="Center">
                     <TextBlock 
                         FontSize="18" FontWeight="Bold"
-                        Text="Food Name" />
+                        Text="{Binding FoodNameField}" />
                 </StackPanel>
             </Grid>
         </Border>

@@ -18,31 +18,15 @@
                     <ColumnDefinition Width="3*" />
                 </Grid.ColumnDefinitions>
                 <ScrollViewer Grid.Column="0" HorizontalContentAlignment="Right" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                    <ListView Margin="10" HorizontalAlignment="Center">
-                        <ListViewItem>
-                            <UserControls_:FoodMenuItemUserControl />
-                        </ListViewItem>
-                        <ListViewItem>
-                            <UserControls_:FoodMenuItemUserControl />
-                        </ListViewItem>
-                        <ListViewItem>
-                            <UserControls_:FoodMenuItemUserControl />
-                        </ListViewItem>
-                        <ListViewItem>
-                            <UserControls_:FoodMenuItemUserControl />
-                        </ListViewItem>
-                        <ListViewItem>
-                            <UserControls_:FoodMenuItemUserControl />
-                        </ListViewItem>
-                        <ListViewItem>
-                            <UserControls_:FoodMenuItemUserControl />
-                        </ListViewItem>
-                    </ListView>
+                    <ListView Margin="10" HorizontalAlignment="Center" 
+                              ItemsSource="{Binding ItemSourceField}"
+                              SelectedItem="{Binding SelectedItemField}"/>
                 </ScrollViewer>
                 <StackPanel Grid.Column="1" Margin="5">
                     <Button Margin="10 10 10 15"
-                        FontSize="18" FontWeight="Light"
-                        Content="Add new food"/>
+                            FontSize="18" FontWeight="Light"
+                            Content="Add new food"
+                            Command="{Binding AddNewFoodBTNCommand}"/>
                     <Button Margin="10 10 10 15"
                         FontSize="18" FontWeight="Light"
                         Content="Delete"/>

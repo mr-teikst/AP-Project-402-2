@@ -31,12 +31,12 @@ namespace ApProject.Models
 
         public static Food f1 = new Food("burger", "beif, bread", 13, 10,
             "C:\\Users\\erfan\\OneDrive\\Desktop\\Code\\C# WPF\\git_Final_Project\\Final_Project\\Final_Project\\assets\\Food_01.jpg",
-            FoodCategory.None, Resturant.r1);
+             Resturant.r1);
         public static Food f2 = new Food("HotDog", "beif, bread", 10, 5,
             "C:\\Users\\erfan\\OneDrive\\Desktop\\Code\\C# WPF\\git_Final_Project\\Final_Project\\Final_Project\\assets\\Food_01.jpg",
-            FoodCategory.None, Resturant.r1);
+             Resturant.r1);
 
-        public Food(string name,string material,double price,int count,string image,FoodCategory category,Resturant restaurant)
+        public Food(string name,string material,double price,int count,string image, Resturant restaurant, FoodCategory category = FoodCategory.None)
         {
             Name = name;
             Material = material;
@@ -48,7 +48,7 @@ namespace ApProject.Models
         }
         public static bool ValidatePrice(double price)
         {
-            if(price < 0)
+            if(price <= 0)
             {
                 return false;
             }

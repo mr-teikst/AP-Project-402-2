@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ApProject.Models;
 using Final_Project.ViewModels.PagesViewModel;
 
 namespace Final_Project.Views.Pages.ResturantPanelPages
@@ -21,10 +22,11 @@ namespace Final_Project.Views.Pages.ResturantPanelPages
     /// </summary>
     public partial class ResturantPanel : Page
     {
-        public ResturantPanel()
+        
+        public ResturantPanel(Resturant mainResturant)
         {
             InitializeComponent();
-            ResturantPanelViewModel vm = new ResturantPanelViewModel();
+            ResturantPanelViewModel vm = new ResturantPanelViewModel(mainResturant);
             DataContext = vm;
         }
     }

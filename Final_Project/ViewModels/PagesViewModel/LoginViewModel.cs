@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using ApProject.Models;
 using Final_Project.Views.Pages.UserPanelPages;
 using Final_Project.Views.Pages;
+using Final_Project.Views.Pages.ResturantPanelPages;
+using System.Security.Cryptography;
 
 namespace Final_Project.ViewModels.PagesViewModel
 {
@@ -23,7 +25,12 @@ namespace Final_Project.ViewModels.PagesViewModel
             UserNameUCVM = new TextInputViewModel() { NameField = "User Name" };
             PasswordUCVM = new TextInputViewModel() { NameField = "Password" };
             Customer u = new Customer("erfan", "123", "erfan", "teikst", "09336632932", new System.Net.Mail.MailAddress("erfan.teikst2027@gmail.com"), "", Gender.Male);
+            Resturant r = new Resturant("res", "res", "res3", "tehran", "tehran markaz");
+            r.Foods.Add(Food.f1);
+            r.Foods.Add(Food.f2);
         }
+
+
 
 
         public RelayCommand LoginCommand => new RelayCommand(execute => LoginFunc(UserNameUCVM.TextField, PasswordUCVM.TextField));
@@ -42,6 +49,10 @@ namespace Final_Project.ViewModels.PagesViewModel
                 if(result is Customer)
                 {
                     mw.MainFrameField = new UserPanel(result as Customer);
+                }
+                else if(result is Resturant)
+                {
+                    mw.MainFrameField = new ResturantPanel(result as Resturant);
                 }
             }
         }
