@@ -16,13 +16,13 @@ namespace ApProject.Models
     }
     public class Order
     {
-        public double Rating;
-        public double Price;
-        public DateTime DateTime;
-        public Resturant Restaurant;
-        public Customer Customer;
-        public Comment Comment;
-        public PaymentType PaymentType;
+        public double Rating {  get; set; }
+        public double Price { get; set; }
+        public DateTime DateTime { get; set; }
+        public Resturant Restaurant { get; set; }
+        public Customer Customer { get; set; }
+        public Comment Comment { get; set; }
+        public PaymentType PaymentType { get; set; }
         public List<Food> Foods= new List<Food>();
 
         public Order(List<Food> foods,Customer customer,Resturant restaurant,PaymentType paymentType)
@@ -33,6 +33,7 @@ namespace ApProject.Models
             this.PaymentType = paymentType;
             this.DateTime = DateTime.Now;
             this.Price=foods.Sum(x => x.Price);
+            //this.Customer.Orders.Add(this);
         }
 
        public static List<Order> FilterByUsername(string username,DateTime start, DateTime end,List<Order> orders)

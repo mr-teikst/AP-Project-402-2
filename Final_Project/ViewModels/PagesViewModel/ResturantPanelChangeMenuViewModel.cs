@@ -30,7 +30,7 @@ namespace Final_Project.ViewModels.PagesViewModel
         public FoodMenuItemUserControl SelectedItemField
         {
             get { return _SelectedItemField; }
-            set { _SelectedItemField = value; }
+            set { _SelectedItemField = value; OnPropertyChanged(); }
         }
 
 

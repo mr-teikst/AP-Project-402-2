@@ -7,11 +7,12 @@ namespace ApProject.Models
 {
     public class Resturant : User
     {
-        public string Name;
-        public string City;
-        public string Address;
-        public double Rating;
-        public bool CanReserve;
+        public string Name { get; set; }
+        public string City { get; set; }
+        public string Address { get; set; }
+        public double Rating { get; set; }
+        public bool CanReserve { get; set; }
+        public bool ActiveReserve { get; set; }
         public List<Complaint > Complaints=new List<Complaint>();
         public List<Food> Foods=new List<Food>();
         public List<Order> Orders=new List<Order>();
@@ -26,6 +27,7 @@ namespace ApProject.Models
             Address = address;
             CanReserve = false;
             Resturants.Add(this);
+            ActiveReserve = false;
         }
         
         public static bool ValidateUsername(string username)
@@ -181,7 +183,7 @@ namespace ApProject.Models
         }
         public void ChangeReserveState()
         {
-            CanReserve=false;
+            ActiveReserve = !ActiveReserve;
         }
 
        public static void CreateCSVfile(List<Order> orders,List<Reserve> reserves)

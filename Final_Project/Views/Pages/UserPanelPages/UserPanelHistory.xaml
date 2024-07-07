@@ -25,30 +25,41 @@
                         Text="Order History" />
                     </StackPanel>
                 </Border>
-                <ScrollViewer Grid.Row="1" HorizontalContentAlignment="Right" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                    <StackPanel Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <ListView>
-                            <ListViewItem>
-                                <UserControls_:OrderHistoryItemUserControl />
-                            </ListViewItem>
-                            <ListViewItem>
-                                <UserControls_:OrderHistoryItemUserControl />
-                            </ListViewItem>
-                            <ListViewItem>
-                                <UserControls_:OrderHistoryItemUserControl />
-                            </ListViewItem>
-                            <ListViewItem>
-                                <UserControls_:OrderHistoryItemUserControl />
-                            </ListViewItem>
-                            <ListViewItem>
-                                <UserControls_:OrderHistoryItemUserControl />
-                            </ListViewItem>
-                            <ListViewItem>
-                                <UserControls_:OrderHistoryItemUserControl />
-                            </ListViewItem>
-                        </ListView>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+                    <ScrollViewer Grid.Column="0" HorizontalContentAlignment="Right" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                        <DataGrid HorizontalAlignment="Stretch" 
+                                  CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" AutoGenerateColumns="False"
+                                  ItemsSource="{Binding ItemSourceField}"
+                                  SelectedItem="{Binding SelectedItemField}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Resturant Name" Binding="{Binding Restaurant.Name}"/>
+                                <DataGridTextColumn Header="Date" Binding="{Binding DateTime}"/>
+                                <DataGridTextColumn Header="Comment" Binding="{Binding Comment.Text}"/>
+                                <DataGridTextColumn Header="Rate" Binding="{Binding Rating}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </ScrollViewer>
+                    <StackPanel Grid.Column="1" Margin="10" HorizontalAlignment="Center">
+                        <TextBlock Margin="4" HorizontalAlignment="Center"
+                                Text="Comment" />
+                        <TextBox Margin="4"
+                                Text="{Binding CommentField}" />
+                        <Button Margin="4" Width="100"
+                                Content="Add Comment" 
+                                Command="{Binding AddCommentBTNCommand}"/>
+                        <TextBlock Margin="4" HorizontalAlignment="Center"
+                                Text="Rate" />
+                        <TextBox Margin="4"
+                                Text="{Binding RateField}" />
+                        <Button Margin="4" Width="100"
+                                Content="Add Rate" 
+                                Command="{Binding AddRateBTNCommand}"/>
                     </StackPanel>
-                </ScrollViewer>
+                </Grid>
             </Grid>
         </Border>
     </Grid>
