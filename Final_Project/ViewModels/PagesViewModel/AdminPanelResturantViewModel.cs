@@ -69,7 +69,7 @@ namespace Final_Project.ViewModels.PagesViewModel
                 HintField = "Invalid UserName";
                 return;
             }
-            if (NameField == null || !Customer.ValidateName(NameField))
+            if (NameField == null)
             {
                 isAllOk = false;
                 HintField = "Invalid Name";
