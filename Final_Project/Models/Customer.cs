@@ -185,7 +185,7 @@ namespace ApProject.Models
                 };
 
                 MailMessage mailMessage = new MailMessage();
-                mailMessage.From = new System.Net.Mail.MailAddress(sender, foods[0].Restaurant.Name);
+                mailMessage.From = new System.Net.Mail.MailAddress(sender);
                 mailMessage.To.Add(email);
                 mailMessage.Subject = "**Order Payment**";
 

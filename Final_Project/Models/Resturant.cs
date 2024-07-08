@@ -24,7 +24,7 @@ namespace ApProject.Models
             City = city;
             Address = address;
             CanReserve = false;
-            ActiveReserve = false;
+            ActiveReserve = true;
             Resturants.Add(this);
         }
         
