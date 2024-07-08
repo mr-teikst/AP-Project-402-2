@@ -13,21 +13,23 @@ using System.Security.Cryptography;
 
 namespace Final_Project.ViewModels.PagesViewModel
 {
-    internal class LoginViewModel : ViewModelBase
+    public class LoginViewModel : ViewModelBase
     {
         public TextInputViewModel UserNameUCVM { get; set; }
         public TextInputViewModel PasswordUCVM { get; set; }
         private MainWindowViewModel mw;
+
+        //public Customer u;
+        //public Resturant r;
+
 
         public LoginViewModel(MainWindowViewModel mw)
         {
             this.mw = mw;
             UserNameUCVM = new TextInputViewModel() { NameField = "User Name" };
             PasswordUCVM = new TextInputViewModel() { NameField = "Password" };
-            Customer u = new Customer("erfan", "123", "erfan", "teikst", "09336632932", new System.Net.Mail.MailAddress("erfan.teikst2027@gmail.com"), "", Gender.Male);
-            Resturant r = new Resturant("res", "res", "res3", "tehran", "tehran markaz");
-            r.Foods.Add(Food.f1);
-            r.Foods.Add(Food.f2);
+            //u = new Customer("erfan", "123", "erfan", "teikst", "09336632932", new System.Net.Mail.MailAddress("erfan.teikst2027@gmail.com"), "", Gender.Male);
+            //r = new Resturant("res", "res", "res3", "tehran", "tehran markaz");
         }
 
 
@@ -46,13 +48,16 @@ namespace Final_Project.ViewModels.PagesViewModel
             else
             {
                 PasswordUCVM.HintField = "loged in successfully";
-                if(result is Customer)
+                var c = Customer.Customers.Where(c => c.UserName == result.UserName);
+                var r = Resturant.Resturants.Where(c => c.UserName == result.UserName);
+                var a = Admin.Admins.Where(c => c.UserName == result.UserName);
+                if (c.Count() > 0 )
                 {
-                    mw.MainFrameField = new UserPanel(result as Customer);
+                    mw.MainFrameField = new UserPanel(c.First());
                 }
-                else if(result is Resturant)
+                else if(r.Count() > 0)
                 {
-                    mw.MainFrameField = new ResturantPanel(result as Resturant);
+                    mw.MainFrameField = new ResturantPanel(r.First());
                 }
             }
         }

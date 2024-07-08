@@ -61,6 +61,7 @@ namespace Final_Project.ViewModels.UserControlsViewModel
         {
             this.MainFood = MainFood;
             FoodNameField = MainFood.Name;
+            MainFood.CalculateFoodAverageRating();
             FoodRateField = "Rate: " + MainFood.Rating.ToString();
             FoodDescriptionField = MainFood.Material;
             FoodImageField = MainFood.Image;

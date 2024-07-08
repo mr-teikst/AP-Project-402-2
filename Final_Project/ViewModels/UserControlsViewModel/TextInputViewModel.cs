@@ -8,7 +8,7 @@ using Final_Project.MVVM;
 
 namespace Final_Project.ViewModels.UserControlsViewModel
 {
-    internal class TextInputViewModel : ViewModelBase
+    public class TextInputViewModel : ViewModelBase
     {
         private string? _NameField;
         public string? NameField

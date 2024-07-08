@@ -19,7 +19,7 @@
                               ItemsSource="{Binding ItemSourceField}"
                               SelectedItem="{Binding SelectedItemField}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="User name" Binding="{Binding Customer.Name}" />
+                            <DataGridTextColumn Header="User name" Binding="{Binding Customer.UserName}" />
                             <DataGridTextColumn Header="Comment" Binding="{Binding Text}" />
                             <DataGridTextColumn Header="Answer" Binding="{Binding Answer}" />
                         </DataGrid.Columns>

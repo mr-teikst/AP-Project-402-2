@@ -18,16 +18,14 @@ namespace ApProject.Models
         public List<Order> Orders=new List<Order>();
         public List<Reserve> Reserves = new List<Reserve>();
         public static List<Resturant > Resturants = new List<Resturant>();
-        public static Resturant r1 = new Resturant("res1", "pass1", "res1", "tehran", "tehran markaz");
-        public static Resturant r2 = new Resturant("res2", "pass2", "res2", "tehran", "tehran markaz");
         public Resturant(string userName, string password,string name,string city,string address) : base(userName, password)
         {
             Name = name;
             City = city;
             Address = address;
             CanReserve = false;
-            Resturants.Add(this);
             ActiveReserve = false;
+            Resturants.Add(this);
         }
         
         public static bool ValidateUsername(string username)

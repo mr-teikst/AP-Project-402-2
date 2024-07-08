@@ -2,6 +2,7 @@
 using System.Net.Mail;
 using System.Text;
 using System.Text.RegularExpressions;
+using Newtonsoft.Json;
 
 namespace ApProject.Models
 {
@@ -18,12 +19,16 @@ namespace ApProject.Models
         Bronze,
         None
     }
+
+
+
     public class Customer : User
     {
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumebr { get; set; }
+        [JsonConverter(typeof(MailAddressConverter))]
         public MailAddress Mail { get; set; }
         public string PostAddress { get; set; }
         public Gender Gender { get; set; }
@@ -33,7 +38,7 @@ namespace ApProject.Models
         public List<Reserve> Reserves = new List<Reserve>();
         public static List<Customer> Customers = new List<Customer>();
 
-        public Customer(string userName, string password,string firstname,string lastname,string phonenumber,MailAddress mail,string postaddress,Gender gender) :base(userName, password)
+        public Customer(string userName, string password,string firstname,string lastname,string phonenumber, MailAddress mail,string postaddress,Gender gender) :base(userName, password)
         {
             
            FirstName =firstname;
@@ -87,7 +92,7 @@ namespace ApProject.Models
             {
                 try
                 {
-                    MailAddress mail = new MailAddress(email);
+                    System.Net.Mail.MailAddress mail = new System.Net.Mail.MailAddress(email);
                     return true;
                 }
                 catch
@@ -117,7 +122,7 @@ namespace ApProject.Models
                 };
 
                 MailMessage mailMessage = new MailMessage();
-                mailMessage.From = new MailAddress(sender, "System");
+                mailMessage.From = new System.Net.Mail.MailAddress(sender, "System");
                 mailMessage.To.Add(email);
                 mailMessage.Subject = "**Verification Code**";
                 mailMessage.Body = "\n\nYour verification code is  : " + verificationCode;
@@ -180,7 +185,7 @@ namespace ApProject.Models
                 };
 
                 MailMessage mailMessage = new MailMessage();
-                mailMessage.From = new MailAddress(sender, foods[0].Restaurant.Name);
+                mailMessage.From = new System.Net.Mail.MailAddress(sender, foods[0].Restaurant.Name);
                 mailMessage.To.Add(email);
                 mailMessage.Subject = "**Order Payment**";
 

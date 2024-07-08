@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Final_Project.Views.Windows;
 using Final_Project.Views.Pages.ResturantPanelPages;
+using ApProject.Models;
 
 namespace Final_Project
 {
@@ -24,6 +25,7 @@ namespace Final_Project
     {
         public MainWindow()
         {
+            User.LoadFromJsonFile();
             InitializeComponent();
             MainWindowViewModel vm = new MainWindowViewModel();
             DataContext = vm;
@@ -33,5 +35,6 @@ namespace Final_Project
             //ResturantWindow rv = new ResturantWindow();
             //rv.Show();
         }
+
     }
 }

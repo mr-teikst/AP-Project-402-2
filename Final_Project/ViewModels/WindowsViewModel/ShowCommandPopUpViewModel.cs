@@ -100,7 +100,7 @@ namespace Final_Project.ViewModels.WindowsViewModel
                 isAllOk = false;
                 return;
             }
-            if(SelectedItemField.comment.Customer != UserPanelViewModel.MainCustomer)
+            if(SelectedItemField.comment.Customer.UserName != UserPanelViewModel.MainCustomer.UserName)
             {
                 HintField = "Comment is not for you";
                 isAllOk = false;
@@ -129,7 +129,7 @@ namespace Final_Project.ViewModels.WindowsViewModel
                 isAllOk = false;
                 return;
             }
-            if (SelectedItemField.comment.Customer != UserPanelViewModel.MainCustomer)
+            if (SelectedItemField.comment.Customer.UserName != UserPanelViewModel.MainCustomer.UserName)
             {
                 HintField = "Comment is not for you";
                 isAllOk = false;
@@ -151,7 +151,7 @@ namespace Final_Project.ViewModels.WindowsViewModel
             {
                 CommentRate comment = SelectedItemField as CommentRate;
                 comment.comment.Edit(comment.comment.Text);
-                var o = MainFood.Ratings.Where(r => r.Customer == comment.comment.Customer);
+                var o = MainFood.Ratings.Where(r => r.Customer.UserName == comment.comment.Customer.UserName);
                 foreach(var r in o)
                 {
                     r.Edit(RateField);
@@ -169,7 +169,7 @@ namespace Final_Project.ViewModels.WindowsViewModel
                 isAllOk = false;
                 return;
             }
-            if (SelectedItemField.comment.Customer != UserPanelViewModel.MainCustomer)
+            if (SelectedItemField.comment.Customer.UserName != UserPanelViewModel.MainCustomer.UserName)
             {
                 HintField = "Comment is not for you";
                 isAllOk = false;
@@ -188,7 +188,7 @@ namespace Final_Project.ViewModels.WindowsViewModel
             ItemSourceField.Clear();
             foreach (Comment comment in Comments)
             {
-                var o = MainFood.Ratings.Where(r => r.Customer == comment.Customer);
+                var o = MainFood.Ratings.Where(r => r.Customer.UserName == comment.Customer.UserName);
                 double? r = (o.Count() > 0) ? o.First().Value : null;
                 CommentRate cr = new CommentRate(comment, r);
                 ItemSourceField.Add(cr);

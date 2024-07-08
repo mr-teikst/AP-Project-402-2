@@ -54,7 +54,7 @@ namespace Final_Project.ViewModels.WindowsViewModel
         {
             MainResturant = mainResturant;
             ResturantNameField = MainResturant.Name;
-            BuildCollection(new List<Food>() { Food.f1, Food.f2 });
+            BuildCollection(MainResturant.Foods);
         }
 
 
