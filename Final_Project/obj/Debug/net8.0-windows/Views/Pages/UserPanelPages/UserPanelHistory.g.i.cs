@@ -54,7 +54,8 @@ namespace Final_Project.Views.Pages.UserPanelPages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Final_Project;component/views/pages/userpanelpages/userpanelhistory.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Final_Project;V1.0.0.0;component/views/pages/userpanelpages/userpanelhistory.xam" +
+                    "l", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\Views\Pages\UserPanelPages\UserPanelHistory.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

@@ -54,8 +54,8 @@ namespace Final_Project.Views.Pages.ResturantPanelPages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Final_Project;component/views/pages/resturantpanelpages/resturantpanelchangemenu" +
-                    ".xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Final_Project;V1.0.0.0;component/views/pages/resturantpanelpages/resturantpanelc" +
+                    "hangemenu.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\..\Views\Pages\ResturantPanelPages\ResturantPanelChangeMenu.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

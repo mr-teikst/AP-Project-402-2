@@ -54,7 +54,7 @@ namespace Final_Project.Views.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Final_Project;component/views/pages/signup.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Final_Project;V1.0.0.0;component/views/pages/signup.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\Pages\SignUp.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
