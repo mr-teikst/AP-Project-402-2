@@ -58,6 +58,9 @@
     <Compile Update="Views\Windows\AddNewFoodPopUp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Windows\AnswerCommentPopUp.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Windows\InputPopUp.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -130,6 +133,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Windows\AddNewFoodPopUp.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Windows\AnswerCommentPopUp.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Windows\InputPopUp.xaml">

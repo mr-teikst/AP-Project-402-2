@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\App.xaml
-24-160171498
+2568966494
 
-65-1732941701
+67-1019589237
 199-615093500
-MainWindow.xaml;Views\Pages\Login.xaml;Views\Pages\ResturantPanelPages\ResturantPanel.xaml;Views\Pages\ResturantPanelPages\ResturantPanelChangeMenu.xaml;Views\Pages\ResturantPanelPages\ResturantPanelReservation.xaml;Views\Pages\SignUp.xaml;Views\Pages\UserPanelPages\UserPanel.xaml;Views\Pages\UserPanelPages\UserPanelComplain.xaml;Views\Pages\UserPanelPages\UserPanelHistory.xaml;Views\Pages\UserPanelPages\UserPanelProfile.xaml;Views\Pages\UserPanelPages\UserPanelSearch.xaml;Views\UserControls\ComplainItemUserControl.xaml;Views\UserControls\FoodItemUserControl.xaml;Views\UserControls\FoodMenuItemUserControl.xaml;Views\UserControls\OrderHistoryItemUserControl.xaml;Views\UserControls\OrderItemUserControl.xaml;Views\UserControls\ResturantSearchItemUserControl.xaml;Views\UserControls\TextInput.xaml;Views\Windows\AddNewFoodPopUp.xaml;Views\Windows\InputPopUp.xaml;Views\Windows\OrderBox.xaml;Views\Windows\ReserveBox.xaml;Views\Windows\ResturantWindow.xaml;Views\Windows\ShowCommentsPopUp.xaml;
+MainWindow.xaml;Views\Pages\Login.xaml;Views\Pages\ResturantPanelPages\ResturantPanel.xaml;Views\Pages\ResturantPanelPages\ResturantPanelChangeMenu.xaml;Views\Pages\ResturantPanelPages\ResturantPanelReservation.xaml;Views\Pages\SignUp.xaml;Views\Pages\UserPanelPages\UserPanel.xaml;Views\Pages\UserPanelPages\UserPanelComplain.xaml;Views\Pages\UserPanelPages\UserPanelHistory.xaml;Views\Pages\UserPanelPages\UserPanelProfile.xaml;Views\Pages\UserPanelPages\UserPanelSearch.xaml;Views\UserControls\ComplainItemUserControl.xaml;Views\UserControls\FoodItemUserControl.xaml;Views\UserControls\FoodMenuItemUserControl.xaml;Views\UserControls\OrderHistoryItemUserControl.xaml;Views\UserControls\OrderItemUserControl.xaml;Views\UserControls\ResturantSearchItemUserControl.xaml;Views\UserControls\TextInput.xaml;Views\Windows\AddNewFoodPopUp.xaml;Views\Windows\AnswerCommentPopUp.xaml;Views\Windows\InputPopUp.xaml;Views\Windows\OrderBox.xaml;Views\Windows\ReserveBox.xaml;Views\Windows\ResturantWindow.xaml;Views\Windows\ShowCommentsPopUp.xaml;
 
-False
+True
 

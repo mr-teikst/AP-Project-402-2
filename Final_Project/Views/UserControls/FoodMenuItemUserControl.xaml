@@ -21,6 +21,10 @@
                     <TextBlock 
                         FontSize="18" FontWeight="Bold"
                         Text="{Binding FoodNameField}" />
+                    <Button  Margin="5" HorizontalAlignment="Center" 
+                             FontSize="12"
+                             Content="show comments"
+                             Command="{Binding ShowCommentBTNCommand}" />
                 </StackPanel>
             </Grid>
         </Border>

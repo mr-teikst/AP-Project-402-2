@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using ApProject.Models;
 using Final_Project.MVVM;
+using Final_Project.ViewModels.PagesViewModel;
+using Final_Project.ViewModels.WindowsViewModel;
+using Final_Project.Views.Windows;
+using static Final_Project.ViewModels.WindowsViewModel.ShowCommandPopUpViewModel;
 
 namespace Final_Project.ViewModels.UserControlsViewModel
 {
@@ -35,5 +39,13 @@ namespace Final_Project.ViewModels.UserControlsViewModel
             FoodNameField = MainFood.Name;
             FoodImageField = mainFood.Image;
         }
+
+        public RelayCommand ShowCommentBTNCommand => new RelayCommand(execute =>
+        {
+            AnswerCommentPopUp pw = new AnswerCommentPopUp(MainFood);
+            AnswerCommentPopUpViewModel pwVM = new AnswerCommentPopUpViewModel(MainFood);
+            pw.DataContext = pwVM;
+            pw.Show();
+        });
     }
 }
