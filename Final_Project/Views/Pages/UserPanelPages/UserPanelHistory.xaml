@@ -47,7 +47,9 @@
                         <TextBlock Margin="4" HorizontalAlignment="Center"
                                 Text="Comment" />
                         <TextBox Margin="4"
-                                Text="{Binding CommentField}" />
+                                Text="{Binding CommentField}" RenderTransformOrigin="0.5,0.5" >
+                            
+                        </TextBox>
                         <Button Margin="4" Width="100"
                                 Content="Add Comment" 
                                 Command="{Binding AddCommentBTNCommand}"/>

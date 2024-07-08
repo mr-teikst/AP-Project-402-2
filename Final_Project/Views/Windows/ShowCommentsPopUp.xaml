@@ -5,20 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Final_Project.Views.Windows"
         mc:Ignorable="d"
-        Title="ShowCommentsPopUp" Height="450" Width="300">
+        Title="ShowCommentsPopUp" Height="450" Width="500">
     <Grid>
         <Border Margin="5"
                 BorderBrush="Black" BorderThickness="3">
-            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-                <DataGrid ItemsSource="{Binding ItemSourceField}" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" AutoGenerateColumns="False">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="User Name" Binding="{Binding Customer.UserName}"/>
-                        <DataGridTextColumn Header="Comment" Binding="{Binding Text}"/>
-                        <DataGridTextColumn Header="Answer" Binding="{Binding Answer}"/>
-                        <DataGridCheckBoxColumn Header="Edited" Binding="{Binding Edited}"/>
-                    </DataGrid.Columns>
-                </DataGrid>
-            </ScrollViewer>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="7*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+                <ScrollViewer Grid.Column="0" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                    <DataGrid CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" AutoGenerateColumns="False"
+                              ItemsSource="{Binding ItemSourceField}"
+                              SelectedItem="{Binding SelectedItemField}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="User Name" Binding="{Binding comment.Customer.UserName}"/>
+                            <DataGridTextColumn Header="Comment" Binding="{Binding comment.Text}"/>
+                            <DataGridTextColumn Header="Rate" Binding="{Binding rate}"/>
+                            <DataGridTextColumn Header="Answer" Binding="{Binding comment.Answer}"/>
+                            <DataGridCheckBoxColumn Header="Edited" Binding="{Binding comment.Edited}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </ScrollViewer>
+                <StackPanel Grid.Column ="1" Margin="5">
+                    <TextBlock Margin="5" HorizontalAlignment="Center"
+                               Text="Edited Comment:" />
+                    <TextBox Margin="5" Width="100"
+                             Text="{Binding CommentField}"/>
+                    <Button Margin="5" Width="100"
+                            Content="Edit Comment" 
+                            Command="{Binding EditCommentBTNCommand}"/>
+                    <TextBlock Margin="5" HorizontalAlignment="Center"
+                               Text="Edited Rate:" />
+                    <TextBox Margin="5" Width="100"
+                             Text="{Binding RateField}"/>
+                    <Button Margin="5" Width="100"
+                            Content="Edit Rate" 
+                            Command="{Binding EditRateBTNCommand}"/>
+                    <Button Margin="5" Width="100"
+                            Content="Delete Comment" 
+                            Command="{Binding DeleteCommentBTNCommand}"/>
+                    <TextBlock Margin="5"
+                               Foreground="Red" FontWeight="Light"
+                               Text="{Binding HintField}" />
+                </StackPanel>
+            </Grid>
+
         </Border>
     </Grid>
 </Window>
