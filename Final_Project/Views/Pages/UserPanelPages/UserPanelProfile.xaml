@@ -10,76 +10,126 @@
       Title="UserPanelProfile">
 
     <Grid Background="White">
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition MinHeight="300" />
-                    <RowDefinition Height="10" />
-                    <RowDefinition MinHeight="250"/>
-                </Grid.RowDefinitions>
-                <Border Grid.Row="0" Margin="20" HorizontalAlignment="Center"
-                        BorderBrush="DarkGray" BorderThickness="3" >
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
-                        <StackPanel Grid.Row="0" Orientation="Horizontal">
-                            <UserControls:TextInput Margin="20 0 20 0" Width="200" Height="55"
-                               />
-                            <UserControls:TextInput Margin="0 0 20 0" Width="200" Height="55"
-                               />
-                            <UserControls:TextInput Margin="0 0 20 0" Width="200" Height="55"
-                                />
-                        </StackPanel>
-                        <StackPanel Grid.Row="1" Orientation="Horizontal">
-                            <UserControls:TextInput Margin="20 0 20 0" Width="200" Height="55"
-                                />
-                            <UserControls:TextInput Margin="0 0 20 0" Width="200" Height="55"
-                               />
+        <Border Margin="5"
+                BorderBrush="Black" BorderThickness="3">
 
-                        </StackPanel>
-                        <StackPanel Grid.Row="2" Orientation="Horizontal">
-                            <UserControls:TextInput Margin="20 0 20 0" Width="200" Height="55"
-                               />
-                            <UserControls:TextInput Margin="0 0 20 0" Width="420" Height="55"
-                                />
-
-                        </StackPanel>
-
-
-
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="6*" />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="4*"/>
+                    </Grid.RowDefinitions>
+                    <Border Grid.Row="0" Margin="20" HorizontalAlignment="Stretch"
+                            BorderBrush="DarkGray" BorderThickness="3" >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Row="0" Grid.Column="0">
+                                <TextBlock Margin="3" HorizontalAlignment="Center" Visibility="Hidden"
+                                           Text="User Name: " />
+                                <TextBox Margin="3" Width="100" Visibility="Hidden"
+                                         Text="{Binding UserNameField}" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="0" Grid.Column="1">
+                                <TextBlock Margin="3" HorizontalAlignment="Center"
+                                           Text="Name: " />
+                                <TextBox Margin="3" Width="100"
+                                         Text="{Binding NameField}" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="0" Grid.Column="2">
+                                <TextBlock Margin="3" HorizontalAlignment="Center"
+                                           Text="Last Name: " />
+                                <TextBox Margin="3" Width="100"
+                                         Text="{Binding LastNameField}" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="0">
+                                <TextBlock Margin="3" HorizontalAlignment="Center"
+                                           Text="Mobile: " />
+                                <TextBox Margin="3" Width="100"
+                                         Text="{Binding MobileField}" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="1">
+                                <TextBlock Margin="3" HorizontalAlignment="Center"
+                                           Text="Email: " />
+                                <TextBox Margin="3" Width="100"
+                                         Text="{Binding EmailField}" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="2">
+                                <TextBlock Margin="3" HorizontalAlignment="Center"
+                                           Text="Gender: " />
+                                <TextBox Margin="3" Width="100"
+                                         Text="{Binding GenderField}" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center">
+                                <TextBlock Margin="3" HorizontalAlignment="Center"
+                                           Text="Address: " />
+                                <TextBox Margin="3" Width="300"
+                                         Text="{Binding AddressField}" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center">
+                                <Button Margin="3" Width="80"
+                                        Content="Apply"
+                                        Command="{Binding ApplyBTNCommand}"/>
+                                <TextBlock Margin="3" HorizontalAlignment="Center"
+                                           Foreground="Red" FontWeight="Light"
+                                           Text="{Binding HintField}" />
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                    <Line Grid.Row="1" VerticalAlignment="Center"
+                          X1="0" Y1="0" X2="780" Y2="0" Stroke="DarkGray" StrokeThickness="2" Margin="10 0 10 0"/>
+                    <Grid Grid.Row="2" Margin="20 0 20 0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="1*" />
+                        </Grid.ColumnDefinitions>
+                        <Border Grid.Column="0" Margin="20"
+                                BorderBrush="DarkGray" BorderThickness="3">
+                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Image Margin="5" Width="100" Height="100"
+                                       Stretch="Uniform"
+                                       Source="C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\assets\beronze_shield.jpg"/>
+                                <Button Margin="5" Width="80"
+                                        Content="Bronze"
+                                        Command="{Binding BeronzeBTNCommand}"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Grid.Column="1" Margin="20"
+                                BorderBrush="DarkGray" BorderThickness="3">
+                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Image Margin="5" Width="100" Height="100"
+                                       Stretch="Uniform"
+                                       Source="C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\assets\silver_shield.jpg"/>
+                                <Button Margin="5" Width="80"
+                                        Content="Silver"
+                                        Command="{Binding SilverBTNCommand}"/>
+                            </StackPanel>
+                        </Border>
+                        <Border Grid.Column="2" Margin="20"
+                                BorderBrush="DarkGray" BorderThickness="3">
+                            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                <Image Margin="5" Width="100" Height="100"
+                                       Stretch="Uniform"
+                                       Source="C:\Users\erfan\OneDrive\Desktop\Code\C# WPF\git_Final_Project\Final_Project\Final_Project\assets\gold_shield.jpg"/>
+                                <Button Margin="5" Width="80"
+                                        Content="Gold"
+                                        Command="{Binding GoldBTNCommand}"/>
+                            </StackPanel>
+                        </Border>
                     </Grid>
-                </Border>
-                <Line Grid.Row="1" VerticalAlignment="Center"
-                      X1="0" Y1="0" X2="780" Y2="0" Stroke="DarkGray" StrokeThickness="2" Margin="10 0 10 0"/>
-                <Grid Grid.Row="2" Margin="20 0 20 0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                        <ColumnDefinition Width="1*" />
-                    </Grid.ColumnDefinitions>
-                    <Border Grid.Column="0" Margin="20"
-                            BorderBrush="DarkGray" BorderThickness="3">
-                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-
-                        </StackPanel>
-                    </Border>
-                    <Border Grid.Column="1" Margin="20"
-                            BorderBrush="DarkGray" BorderThickness="3">
-                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-
-                        </StackPanel>
-                    </Border>
-                    <Border Grid.Column="2" Margin="20"
-                            BorderBrush="DarkGray" BorderThickness="3">
-                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-
-                        </StackPanel>
-                    </Border>
                 </Grid>
-            </Grid>
-        </ScrollViewer>
+            </ScrollViewer>
+        </Border>
     </Grid>
 </Page>

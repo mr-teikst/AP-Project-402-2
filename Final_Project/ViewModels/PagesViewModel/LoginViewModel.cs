@@ -9,6 +9,7 @@ using ApProject.Models;
 using Final_Project.Views.Pages.UserPanelPages;
 using Final_Project.Views.Pages;
 using Final_Project.Views.Pages.ResturantPanelPages;
+using Final_Project.Views.Pages.AdminPanelPages;
 using System.Security.Cryptography;
 
 namespace Final_Project.ViewModels.PagesViewModel
@@ -30,6 +31,7 @@ namespace Final_Project.ViewModels.PagesViewModel
             PasswordUCVM = new TextInputViewModel() { NameField = "Password" };
             //u = new Customer("erfan", "123", "erfan", "teikst", "09336632932", new System.Net.Mail.MailAddress("erfan.teikst2027@gmail.com"), "", Gender.Male);
             //r = new Resturant("res", "res", "res3", "tehran", "tehran markaz");
+            //Admin a = new Admin("root", "root");
         }
 
 
@@ -58,6 +60,10 @@ namespace Final_Project.ViewModels.PagesViewModel
                 else if(r.Count() > 0)
                 {
                     mw.MainFrameField = new ResturantPanel(r.First());
+                }
+                else if(a.Count() > 0)
+                {
+                    mw.MainFrameField = new AdminPanel();  
                 }
             }
         }

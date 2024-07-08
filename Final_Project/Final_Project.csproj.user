@@ -7,6 +7,12 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\Pages\AdminPanelPages\AdminPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\AdminPanelPages\AdminPanelResturant.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Pages\Login.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -79,6 +85,12 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\AdminPanelPages\AdminPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\AdminPanelPages\AdminPanelResturant.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Pages\Login.xaml">
